@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>02EE459C-3EE6-45B5-9E2E-F592E4406327</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CleanChinaApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>42D8ACE5-0919-48C5-A395-1A8A52600327</key>
+		<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
+		<key>E07F75FB-922A-435A-B72E-AD9CA603087A</key>
+		<string>https://github.com/mobilitychina/MC_Platform_iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CleanChinaApp/CleanChinaApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>42D8ACE5-0919-48C5-A395-1A8A52600327</key>
+		<string>../../..</string>
+		<key>E07F75FB-922A-435A-B72E-AD9CA603087A</key>
+		<string>../../../../ios/core</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>42D8ACE5-0919-48C5-A395-1A8A52600327</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>42D8ACE5-0919-48C5-A395-1A8A52600327</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cleanchina</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E07F75FB-922A-435A-B72E-AD9CA603087A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>core</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,40 @@
+//
+//  IPConfigCMD.m
+//  Aroundme
+//
+//  Created by W Sheely on 13-2-6.
+//  Copyright (c) 2013年 dianping.com. All rights reserved.
+//
+
+#import "IPConfigCMD.h"
+
+@implementation ipconfig
+- (void)description{
+    [NVDebugPanelController.instance addLog: @"IPConfigCMD 命令\n arg0:类型,arg1:值\n例:arg0=1 yp.api.51ping.com;\narg0=1 192.168.30.78:8080/yellowpage"];
+}
+- (void)execute{
+    if(self.args.count >=2){
+        NVInternalSetNetworkDomain((NSString*)[self.args objectAtIndex:0], (NSString*)[self.args objectAtIndex:1]);
+    }else if (self.args.count == 1){
+        int type = ((NSString*)[self.args objectAtIndex:0]).integerValue;
+        
+        if(type == 0){
+            NVInternalSetNetworkDomain(@"yp.api.dianping.com", @"yp.api.dianping.com");
+            [NVDebugPanelController.instance addLog:  @"domain set:DEFAULT"];
+        }else if(type == 1){
+            NVInternalSetNetworkDomain(@"yp.api.dianping.com", @"yp.api.51ping.com");
+            [NVDebugPanelController.instance addLog:  @"domain set:yp.api.51ping.com"];
+        }else if(type == 2){
+            NVInternalSetNetworkDomain(@"yp.api.dianping.com", @"192.168.30.78:8080/yellowpage");
+            [NVDebugPanelController.instance addLog:  @"domain set:192.168.30.78:8080/yellowpage"];
+        }
+    }else{
+        [self description];
+    }
+    
+}
+@end
+
+
+@implementation ip
+@end

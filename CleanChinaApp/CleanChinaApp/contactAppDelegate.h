@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SHLoadingViewController.h"
 @interface contactAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    SHLoadingViewController * mLoadingViewController;
 
+}
 @property (strong, nonatomic) UIWindow *window;
 
 @end

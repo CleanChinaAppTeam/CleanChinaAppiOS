@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9691D32F-8F3D-47A0-A984-F2FB67D9141B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>cleanapp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>309AF30F-5160-4973-BEF6-F4B40DDDEB62</key>
+		<string>https://github.com/mobilitychina/MC_Platform_iOS.git</string>
+		<key>3429A614-333E-494B-8DE9-C0ADF74BDF8C</key>
+		<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>cleanapp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>309AF30F-5160-4973-BEF6-F4B40DDDEB62</key>
+		<string>../../../../ios/core</string>
+		<key>3429A614-333E-494B-8DE9-C0ADF74BDF8C</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3429A614-333E-494B-8DE9-C0ADF74BDF8C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3429A614-333E-494B-8DE9-C0ADF74BDF8C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Cleanchina</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>309AF30F-5160-4973-BEF6-F4B40DDDEB62</string>
+			<key>IDESourceControlWCCName</key>
+			<string>core</string>
+		</dict>
+	</array>
+</dict>
+</plist>
