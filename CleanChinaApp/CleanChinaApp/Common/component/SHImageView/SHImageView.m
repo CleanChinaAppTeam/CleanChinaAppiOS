@@ -32,6 +32,17 @@
     mIndicatorview.center = self.center;
 }
 
+- (void)setUrl:(NSString *)url_ args:(NSString*) idvalue
+{
+    
+    SHPostTaskM* taskDefaultImag= [[SHPostTaskM alloc]init];
+    taskDefaultImag.URL = url_;
+    [taskDefaultImag.postArgs setValue:idvalue forKey:@"id"];
+    taskDefaultImag.cachetype = CacheTypeTimes;
+    self.urlTask = taskDefaultImag;
+    
+}
+
 - (void)setUrlTask:(SHTask *)urlTask
 {
     _urlTask = urlTask;

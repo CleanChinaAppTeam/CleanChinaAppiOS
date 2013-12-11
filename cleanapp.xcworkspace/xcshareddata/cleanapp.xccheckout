@@ -5,38 +5,38 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>9691D32F-8F3D-47A0-A984-F2FB67D9141B</string>
+	<string>B0CCDBC5-157F-49D3-B949-8A38108DEFE7</string>
 	<key>IDESourceControlProjectName</key>
 	<string>cleanapp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>309AF30F-5160-4973-BEF6-F4B40DDDEB62</key>
-		<string>https://github.com/mobilitychina/MC_Platform_iOS.git</string>
-		<key>3429A614-333E-494B-8DE9-C0ADF74BDF8C</key>
+		<key>42D8ACE5-0919-48C5-A395-1A8A52600327</key>
 		<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
+		<key>E07F75FB-922A-435A-B72E-AD9CA603087A</key>
+		<string>https://github.com/mobilitychina/MC_Platform_iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cleanapp.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>309AF30F-5160-4973-BEF6-F4B40DDDEB62</key>
-		<string>../../../../ios/core</string>
-		<key>3429A614-333E-494B-8DE9-C0ADF74BDF8C</key>
+		<key>42D8ACE5-0919-48C5-A395-1A8A52600327</key>
 		<string>..</string>
+		<key>E07F75FB-922A-435A-B72E-AD9CA603087A</key>
+		<string>../../../../ios/core</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/CleanChinaAppTeam/CleanChinaAppiOS.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3429A614-333E-494B-8DE9-C0ADF74BDF8C</string>
+	<string>42D8ACE5-0919-48C5-A395-1A8A52600327</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3429A614-333E-494B-8DE9-C0ADF74BDF8C</string>
+			<string>42D8ACE5-0919-48C5-A395-1A8A52600327</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Cleanchina</string>
 		</dict>
@@ -44,7 +44,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>309AF30F-5160-4973-BEF6-F4B40DDDEB62</string>
+			<string>E07F75FB-922A-435A-B72E-AD9CA603087A</string>
 			<key>IDESourceControlWCCName</key>
 			<string>core</string>
 		</dict>

@@ -7,6 +7,7 @@
 //
 
 #import "contactAppDelegate.h"
+#import "SHMainViewController.h"
 
 @implementation contactAppDelegate
 
@@ -14,8 +15,8 @@
 {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    mLoadingViewController = [[SHLoadingViewController alloc]init];
-    self.window.rootViewController = mLoadingViewController;
+    mMainViewController = [[SHMainViewController alloc]init];
+    self.window.rootViewController = mMainViewController;
     [self.window makeKeyAndVisible];
     //self.w
     return YES;

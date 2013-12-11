@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Font>
-    <property name="FontScaleSmall" size = "14"  />
-    <property name="FontScaleMid"   size = "16" />
+    <property name="FontScaleSmall" size = "13"  />
+    <property name="FontScaleMid"   size = "14" />
     <property name="FontScaleLarge" size = "18" />
     <property name="FontScaleSmallBold" size = "15" type = "bold"/>
     <property name="FontScaleMidBold"   size = "17" type = "bold" />

@@ -25,4 +25,5 @@
 @property (nonatomic,assign) id<SHImageViewDelegate> delegate;
 @property (nonatomic,copy) NSString * mark;
 
+- (void)setUrl:(NSString *)url_ args:(NSString*) idvalue;
 @end

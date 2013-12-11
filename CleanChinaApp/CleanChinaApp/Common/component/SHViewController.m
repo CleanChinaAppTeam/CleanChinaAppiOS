@@ -158,11 +158,39 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [self registerForKeyboardNotifications];
+    
 }
+
+//- (void) __subview :(UIView*) view
+//{
+//    if( view.subviews.count > 0){
+//        for (UIView * v  in view.subviews) {
+//            [self __subview:v];
+//        }
+//    }else if ([view isKindOfClass:[UITextView class]] && [view respondsToSelector:@selector(resignFirstResponder)]){
+//        //NSLog(@"%@",[[view class] description]);
+//        [view resignFirstResponder];
+//    }
+//}
+
+- (void)resignKeyBoardInView:(UIView *)view
+{
+    for (UIView *v in view.subviews) {
+        if ([v.subviews count] > 0) {
+            [self resignKeyBoardInView:v];
+        }
+        
+        if ([v isKindOfClass:[UITextView class]] || [v isKindOfClass:[UITextField class]]) {
+            [v resignFirstResponder];
+        }
+    }
+}
+
 
 -(void)viewDidDisappear:(BOOL)animated
 {
     [self unregisterForKeyboardNotifications];
+    [self resignKeyBoardInView:self.view];
 }
 
 - (void)registerForKeyboardNotifications
@@ -220,6 +248,22 @@
     //设定动画持续时间
     [UIView setAnimationDuration:0.3];
     _keybordView.frame = mRectkeybordview;
+    [UIView commitAnimations];
+}
+
+- (void)animationDismiss
+{
+    [self.view removeFromSuperview];
+    self.view.alpha = 1;
+}
+
+- (void)dismiss
+{
+    [UIView beginAnimations:Nil context:Nil];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDuration:1];
+    self.view.alpha = 0;
+    [UIView setAnimationDidStopSelector:@selector(animationDismiss)];
     [UIView commitAnimations];
 }
 @end

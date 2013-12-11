@@ -7,6 +7,7 @@
 //
 
 #import "SHNavigationShowViewController.h"
+#import "NVSkin.h"
 
 @interface SHNavigationShowViewController ()
 
@@ -39,19 +40,23 @@
     mNavigationController = [[UINavigationController alloc]init];
     mNavigationController.navigationBar.translucent = NO;
     [mNavigationController.navigationBar setBackgroundImage:([[UIImage imageNamed:@"navigation_bar_bg"] stretchableImageWithLeftCapWidth:5 topCapHeight:10]) forBarMetrics:UIBarMetricsDefault];
-    mNavigationController.navigationBar.backgroundColor = [UIColor blueColor];
+    mNavigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    mNavigationController.navigationBar.tintColor = [UIColor clearColor];
     mNavigationController.navigationBar.clipsToBounds = YES;
     mNavigationController.delegate = self;
-    mNavigationController.view.backgroundColor = [UIColor clearColor];
+    //mNavigationController.view.backgroundColor = [UIColor clearColor];
+    //mNavigationController.navigationBar.translucent = NO;
     [self.view addSubview:mNavigationController.view];
-    CGRect imgShade = self.view.bounds;
-    imgShade.origin.x = -5;
-    imgShade.size.width= 5;
-    UIImageView*img = [[UIImageView alloc]initWithFrame:imgShade];
-    
-    img.image = [UIImage imageNamed:@"showview_left_shade"];
+    CGRect imgShadeFrame = self.view.bounds;
+    imgShadeFrame.origin.x = -5;
+    imgShadeFrame.size.width= 8;
+    if(imgShade == nil){
+        imgShade = [[UIImageView alloc]initWithFrame:imgShadeFrame];
+        imgShade.image = [NVSkin.instance stretchImage:@"showview_left_shade"];
+    }
+    imgShade.frame = imgShadeFrame;
     self.view.backgroundColor = [UIColor clearColor];
-    [self.view insertSubview:img atIndex:0];
+    [self.view insertSubview:imgShade atIndex:0];
 
 }
 
@@ -60,10 +65,18 @@
     if(mNavigationController.viewControllers.count == 1){
         UIViewController * controller =  [mNavigationController.viewControllers objectAtIndex:0];
         controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCancel :self action:@selector(btnBack:)];
+    }else{
+//        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage: [NVSkin.instance image:@"NaviBack.png" ] title:nil target:self action:@selector(popViewControllerAnimated)];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"返回" target: self action:@selector(popViewControllerAnimated)];
     }
 }
 
-- (void)btnBack:(NSObject * )object
+- (void) popViewControllerAnimated
+{
+    [mNavigationController popViewControllerAnimated:YES];
+}
+
+- (void) btnBack:(NSObject * )object
 {
     if(self.delegate && [self.delegate respondsToSelector:@selector(navigationShowControllerDidDissmiss)]){
         [self.delegate navigationShowControllerDidDissmiss];
@@ -76,11 +89,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)show : (UIViewController*)controller
 {
     [self createNavi];
     [mNavigationController pushViewController:controller animated:NO];
 }
+
 - (void)show :(UIViewController*)controller  frame:(CGRect) frame inView:(UIView*)view
 {
     if(self.isShow){
@@ -103,12 +118,62 @@
     self.isShow = YES;
 }
 
+- (void)show :(UIViewController*)controller  frame:(CGRect) frame inView:(UIView*)view module :(BOOL) module
+{
+    if(self.isShow){
+        return;
+    }
+    self.view.frame = frame;
+  
+    self.view.alpha = 1;
+   
+    UIView * bgView = [[UIView alloc]init];
+    bgView.frame = self.view.bounds;
+    bgView.autoresizingMask = (
+                               UIViewAutoresizingFlexibleWidth       |
+                               UIViewAutoresizingFlexibleHeight
+                               );
+    [self createNavi];
+    [self.view insertSubview:bgView atIndex:0];
+
+ 
+    CGRect orRect = frame;
+    orRect.origin.x = view.frame.size.width;
+    self.view.frame = view.bounds;
+    bgView.alpha = 0;
+    mNavigationController.view.frame = orRect;
+    CGRect imgShadeFrame = orRect;
+    imgShadeFrame.size.width = 10;
+    imgShade.frame = imgShadeFrame;
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.2];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    bgView.alpha = 0.3;
+    bgView.backgroundColor = [UIColor blackColor];
+
+    mNavigationController.view.frame = frame;
+    [mNavigationController pushViewController:controller animated:YES];
+    imgShadeFrame = frame;
+    imgShadeFrame.origin.x = -5 + imgShadeFrame.origin.x;
+    imgShadeFrame.size.width= 5;
+    imgShade.frame = imgShadeFrame;
+//    [self.view addSubview:imgShade];
+    [self.view insertSubview:imgShade belowSubview:mNavigationController.view];
+    [view addSubview:self.view];
+    [UIView commitAnimations];
+    self.isShow = YES;
+}
+
 -(void)dismiss
 {
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.6];
     [UIView setAnimationDidStopSelector:@selector(btnAnimationDidStop)];
     self.view.alpha = 0;
+    [self viewDidDisappear:YES];
+    for (UIViewController * controller  in mNavigationController.viewControllers) {
+        [controller viewDidDisappear:YES];
+    }
     [UIView commitAnimations];
     self.isShow = NO;
 }

@@ -12,7 +12,7 @@
 - (void)execute{
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
 																		NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *crashFilePath = [documentsDirectory stringByAppendingPathComponent:@"crashstack"];
+    NSString *crashFilePath = [documentsDirectory stringByAppendingPathComponent:@"crash.txt"];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if([fileManager fileExistsAtPath:crashFilePath]) {
 		//NSError *error = nil;

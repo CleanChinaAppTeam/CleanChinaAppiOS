@@ -98,5 +98,29 @@
     int y=[[str substringWithRange:NSMakeRange(0,4)]intValue];
     return[NSString stringWithFormat:@"%d%@",y-1911,[str stringByReplacingCharactersInRange:NSMakeRange(0,4)withString:@""]];
 }
+//是不是本周
+- (BOOL)isCurrentWeek:(NSString*) string
+{
+    return [SHTools isCurrentWeek:string];
+}
+//是不是本月
+- (BOOL) isCurrentMonth:(NSString*) string
+{
+    return [SHTools isCurrentMonth:string];
+}
+//是不是本季度
+- (BOOL) isCurrentQuarter:(NSString*)  string
+{
+    return [SHTools isCurrentQuarter:string];
+}
+
+//+ (NSDate*) dateByLocal
+//{
+//    NSDate *date = [NSDate date];
+//    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+//    NSInteger interval = [zone secondsFromGMTForDate: date];
+//    NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
+//    return localeDate;
+//}
 
 @end

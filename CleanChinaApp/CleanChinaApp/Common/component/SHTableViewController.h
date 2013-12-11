@@ -19,7 +19,7 @@
      NSMutableArray * mList;
     BOOL  mIsEnd;
 }
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 - (SHTableViewGeneralCell *)dequeueReusableGeneralCell;
 

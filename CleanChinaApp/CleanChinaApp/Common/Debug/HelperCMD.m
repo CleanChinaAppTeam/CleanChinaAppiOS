@@ -15,8 +15,8 @@
     [cmd appendFormat:@"cls : 清空屏幕\n"];
     [cmd appendFormat:@"ip\\ipconfig: 设置host地址\n"];
     [cmd appendFormat:@"ipconfig: 设置host地址\n"];
-    [cmd appendFormat:@"log : 读取log\n"];
-    [cmd appendFormat:@"l   : 读取log\n"];
+    [cmd appendFormat:@"logger : 读取log\n"];
+    [cmd appendFormat:@"LogCMD: 读取log\n"];
     [NVDebugPanelController.instance addLog:cmd];
 }
 @end

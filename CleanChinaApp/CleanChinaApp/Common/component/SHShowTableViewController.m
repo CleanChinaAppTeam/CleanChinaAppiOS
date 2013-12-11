@@ -64,6 +64,7 @@
 
 - (void)loadSkin
 {
+    [super loadSkin];
     mLabel.userstyle = @"labmiddark";
     mLabel.textAlignment = NSTextAlignmentCenter;
 }

@@ -31,4 +31,11 @@
 - (NSString*)dateToTW:(NSString*)string;
 //获取当前周
 - (NSArray *)arrayCurWeek;
+//+ (NSDate *) dateByLocal;
+//是不是本周
+- (BOOL)isCurrentWeek:(NSString*) string ;
+//是不是本月
+- (BOOL) isCurrentMonth:(NSString*) string ;
+//是不是本季度
+- (BOOL) isCurrentQuarter:(NSString*)  string ;
 @end

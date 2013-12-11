@@ -60,6 +60,12 @@ NVDebugPanelController * mDebugPanel;
     mTextConsole.text = str;
     mTextConsole.editable = NO;
     mTextConsole.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationReceive:) name:CORE_NOTIFICATION_LOG_RECORD object:nil];
+}
+
+- (void)notificationReceive:(NSNotification *) info
+{
+    [self addLog:info.object];
 }
 - (void)viewDidUnload {
     mTextField = nil;
@@ -76,7 +82,7 @@ NVDebugPanelController * mDebugPanel;
     Command* cmd;
     if([array count]>0){
         NSString* command = [array objectAtIndex:0];
-        if([command caseInsensitiveCompare:@"cls"]==NSOrderedSame){
+        if([command caseInsensitiveCompare:@"cls"] == NSOrderedSame){
             mTextConsole.text = @"";
             mTextField.text = @"";
         }else{

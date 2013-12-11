@@ -27,8 +27,8 @@
 {
     [super viewDidLoad];
     [UIView beginAnimations:Nil context:nil];
-    [UIView setAnimationDelay:2];
-    [UIView setAnimationDuration:5];
+    [UIView setAnimationDelay:0];
+    [UIView setAnimationDuration:0.5];
     CGRect frame = mImgWave.frame;
     frame.origin.x = -512;
     mImgWave.frame = frame;
@@ -36,9 +36,14 @@
     frame.origin.y = 60;
     mImgMaxBubble.frame = frame;
     mImgMinBubble.frame = frame;
+    [UIView setAnimationDelegate:self];
     [UIView commitAnimations];
     
     // Do any additional setup after loading the view from its nib.
+}
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    [self dismiss];
 }
 
 - (void)didReceiveMemoryWarning

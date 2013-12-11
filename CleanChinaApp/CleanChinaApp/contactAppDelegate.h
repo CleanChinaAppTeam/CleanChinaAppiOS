@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "SHLoadingViewController.h"
+#import "SHMainViewController.h"
 @interface contactAppDelegate : UIResponder <UIApplicationDelegate>
 {
-    SHLoadingViewController * mLoadingViewController;
+    SHMainViewController * mMainViewController;
 
 }
 @property (strong, nonatomic) UIWindow *window;

@@ -31,9 +31,10 @@ NSString * const MMProgressHUDAnimationKeyShowAnimation = @"show";
 NSString * const MMProgressHUDAnimationKeyDismissAnimation = @"dismiss";
 
 NSUInteger const MMProgressHUDConfirmationPulseCount = 8;//Keep this number even
+const float MMProgressHUDStandardDismissDelay = 0.75f;
 
 CGSize const MMProgressHUDDefaultImageSize = {37.f, 37.f};
-float const MMProgressHUDStandardDismissDelay = 0.75f;
+
 #pragma mark - MMProgressHUD
 @interface MMProgressHUD () <MMHudDelegate>
 

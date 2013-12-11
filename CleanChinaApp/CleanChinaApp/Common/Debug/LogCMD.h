@@ -11,3 +11,6 @@
 @interface LogCMD : Command
 
 @end
+@interface logger : LogCMD
+
+@end

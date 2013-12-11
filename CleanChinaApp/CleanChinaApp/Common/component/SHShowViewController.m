@@ -65,12 +65,14 @@
     [self.view addSubview:imglogo];
      
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor clearColor];
+    //self.view.backgroundColor = [UIColor clearColor];
   	// Do any additional setup after loading the view.
 }
 
 - (void)loadSkin
 {
+    //[super loadSkin];
+    self.view.backgroundColor = [UIColor clearColor];
     mLabel.userstyle = @"labmiddark";
     mLabel.textAlignment = NSTextAlignmentCenter;
 }

@@ -40,4 +40,6 @@
 - (void)showAlertDialog:(NSString*)content button:(NSString*)button otherButton:(NSString*)otherbutton;
 
 - (void)showAlertDialog:(NSString*)content button:(NSString*)button otherButton:(NSString*)otherbutton tag:(int)tag;
+
+- (void)dismiss;
 @end

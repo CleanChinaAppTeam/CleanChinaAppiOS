@@ -12,6 +12,10 @@
         <property name="font"       type="UIFont"   value="FontScaleLarge"/>
         <property name="textColor"  type="UIColor"  value="ColorStyleDark" />
     </lablargedark>
+    <lablargemilk>
+        <property name="font"       type="UIFont"   value="FontScaleLarge"/>
+        <property name="textColor"  type="UIColor"  value="ColorStyleMilkWhite" />
+    </lablargemilk>
     <lablargedarkbold>
         <property name="font"       type="UIFont"   value="FontScaleLargeBold"/>
         <property name="textColor"  type="UIColor"  value="ColorStyleDark" />
@@ -24,6 +28,13 @@
         
         
     </labmiddark >
+    <labmidlight>
+        <property name="font"       type="UIFont"   value="FontScaleMid"/>
+        <property name="textColor"  type="UIColor"  value="ColorStyleLight" />
+        <property name="highlightedTextColor"  type="UIColor"  value="ColorStyleMilkWhite" />
+        
+        
+    </labmidlight >
     <labmiddarknohighlight parent = "labmiddark">
         <property name="highlightedTextColor"  type="UIColor"  value="ColorStyleDark" />
         

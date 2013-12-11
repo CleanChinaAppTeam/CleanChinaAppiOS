@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanChinaApp/CleanChinaApp/contactViewController.m"
-            timestampString = "407556968.173272"
+            filePath = "CleanChinaApp/CleanChinaApp/MainFrame/SHMainViewController.m"
+            timestampString = "408475912.069548"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-animationDidStop"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,29 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanChinaApp/CleanChinaApp/contactAppDelegate.m"
-            timestampString = "407562549.920236"
+            filePath = "CleanChinaApp/CleanChinaApp/MainFrame/SHMainViewController.m"
+            timestampString = "408475917.195583"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CleanChinaApp/CleanChinaApp/contactAppDelegate.m"
-            timestampString = "407557378.765677"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "-applicationWillResignActive:"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-animationDidStop"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -15,4 +15,6 @@
     __weak IBOutlet UIImageView *mImgMaxBubble;
     __weak IBOutlet UIImageView *mImgWave;
 }
+
+
 @end
