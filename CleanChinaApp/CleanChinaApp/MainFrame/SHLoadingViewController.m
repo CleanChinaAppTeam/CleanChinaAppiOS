@@ -28,7 +28,7 @@
     [super viewDidLoad];
     [UIView beginAnimations:Nil context:nil];
     [UIView setAnimationDelay:0];
-    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDuration:3];
     CGRect frame = mImgWave.frame;
     frame.origin.x = -512;
     mImgWave.frame = frame;

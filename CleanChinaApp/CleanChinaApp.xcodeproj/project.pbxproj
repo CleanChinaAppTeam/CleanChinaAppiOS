@@ -30,6 +30,9 @@
 		9E1ECCA0184AD198003ECD5F /* img_max_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1ECC9A184AD198003ECD5F /* img_max_bubble.png */; };
 		9E1ECCA1184AD198003ECD5F /* img_min_bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1ECC9B184AD198003ECD5F /* img_min_bubble.png */; };
 		9E1ECCA3184AD198003ECD5F /* img_wave.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E1ECC9D184AD198003ECD5F /* img_wave.png */; };
+		9E241A11185A9D6E0029A807 /* MainShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E241A10185A9D6E0029A807 /* MainShowViewController.m */; };
+		9E241A13185A9D7E0029A807 /* MainShowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E241A12185A9D7E0029A807 /* MainShowViewController.xib */; };
+		9E241A15185AA0050029A807 /* img_gray_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E241A14185AA0050029A807 /* img_gray_line.png */; };
 		9E2EDD261857F5F200F8F591 /* SHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2EDD241857F5F200F8F591 /* SHMainViewController.m */; };
 		9E2EDD271857F5F200F8F591 /* SHMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E2EDD251857F5F200F8F591 /* SHMainViewController.xib */; };
 		9E33DBE818589E53008C61AC /* UIButton+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E33DB2118589E52008C61AC /* UIButton+Addition.m */; };
@@ -214,6 +217,10 @@
 		9E1ECC9A184AD198003ECD5F /* img_max_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_max_bubble.png; sourceTree = "<group>"; };
 		9E1ECC9B184AD198003ECD5F /* img_min_bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_min_bubble.png; sourceTree = "<group>"; };
 		9E1ECC9D184AD198003ECD5F /* img_wave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_wave.png; sourceTree = "<group>"; };
+		9E241A0F185A9D6E0029A807 /* MainShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainShowViewController.h; sourceTree = "<group>"; };
+		9E241A10185A9D6E0029A807 /* MainShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainShowViewController.m; sourceTree = "<group>"; };
+		9E241A12185A9D7E0029A807 /* MainShowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainShowViewController.xib; sourceTree = "<group>"; };
+		9E241A14185AA0050029A807 /* img_gray_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_gray_line.png; sourceTree = "<group>"; };
 		9E2EDD231857F5F200F8F591 /* SHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMainViewController.h; sourceTree = "<group>"; };
 		9E2EDD241857F5F200F8F591 /* SHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMainViewController.m; sourceTree = "<group>"; };
 		9E2EDD251857F5F200F8F591 /* SHMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHMainViewController.xib; sourceTree = "<group>"; };
@@ -576,6 +583,7 @@
 		9E1ECC98184AD198003ECD5F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
+				9E241A14185AA0050029A807 /* img_gray_line.png */,
 				9E33DC8D1858CADA008C61AC /* ic_book_ac.png */,
 				9E33DC8E1858CADA008C61AC /* ic_book_ac@2x.png */,
 				9E33DC8F1858CADA008C61AC /* ic_book.png */,
@@ -611,8 +619,19 @@
 		9E1ECCA5184AD1AE003ECD5F /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				9E241A0E185A9D020029A807 /* MainShow */,
 			);
 			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		9E241A0E185A9D020029A807 /* MainShow */ = {
+			isa = PBXGroup;
+			children = (
+				9E241A0F185A9D6E0029A807 /* MainShowViewController.h */,
+				9E241A10185A9D6E0029A807 /* MainShowViewController.m */,
+				9E241A12185A9D7E0029A807 /* MainShowViewController.xib */,
+			);
+			path = MainShow;
 			sourceTree = "<group>";
 		};
 		9E33DB1C18589E52008C61AC /* Common */ = {
@@ -1200,6 +1219,7 @@
 				9E33DCA51858CADA008C61AC /* ic_show_ac.png in Resources */,
 				9E33DC8B1858C911008C61AC /* ic_new.png in Resources */,
 				9E33DBF518589E53008C61AC /* DSLCalendar-nextMonth.png in Resources */,
+				9E241A13185A9D7E0029A807 /* MainShowViewController.xib in Resources */,
 				9E33DBF718589E53008C61AC /* DSLCalendar-previousMonth.png in Resources */,
 				9E33DC3218589E53008C61AC /* SHTableViewEditGeneralCell.xib in Resources */,
 				9E33DC0518589E53008C61AC /* blackArrow@2x.png in Resources */,
@@ -1213,6 +1233,7 @@
 				9E33DC0918589E53008C61AC /* grayArrow@2x.png in Resources */,
 				9EA397F51858CC08006E0A6E /* ic_weibo.png in Resources */,
 				9E33DCAB1858CADA008C61AC /* ic_youku.png in Resources */,
+				9E241A15185AA0050029A807 /* img_gray_line.png in Resources */,
 				9E2EDD271857F5F200F8F591 /* SHMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1284,6 +1305,7 @@
 				9E33DC0E18589E53008C61AC /* KxMenu.m in Sources */,
 				9E33DC4918589E53008C61AC /* NSMutableArray+convenience.m in Sources */,
 				9E33DC1F18589E53008C61AC /* SHSelectionViewController.m in Sources */,
+				9E241A11185A9D6E0029A807 /* MainShowViewController.m in Sources */,
 				9E33DBF018589E53008C61AC /* DSLCalendarMonthSelectorView.m in Sources */,
 				9E33DC1E18589E53008C61AC /* MMVectorImage.m in Sources */,
 				9E33DC5418589E53008C61AC /* NVDebugPanelController.m in Sources */,
@@ -1420,7 +1442,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sheely wang (6G9Q92Y33P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanChinaApp/CleanChinaApp-Prefix.pch";
@@ -1434,7 +1456,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EEFF19A3-7625-49ED-AF97-E42969E2D6E4";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1445,7 +1467,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: sheely wang (6G9Q92Y33P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanChinaApp/CleanChinaApp-Prefix.pch";
@@ -1459,7 +1481,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "EEFF19A3-7625-49ED-AF97-E42969E2D6E4";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

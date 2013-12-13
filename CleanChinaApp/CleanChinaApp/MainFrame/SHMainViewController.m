@@ -7,6 +7,7 @@
 //
 
 #import "SHMainViewController.h"
+#import "MainShowViewController.h"
 
 @interface SHMainViewController ()
 
@@ -70,4 +71,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnShowOnTouch:(id)sender
+{
+//    MainShowViewController * controller = [[MainShowViewController alloc]init];
+//    controller.view;
+//    [self addChildViewController:controller];
+//    
+//    [self.view addSubview:controller.view];
+}
 @end

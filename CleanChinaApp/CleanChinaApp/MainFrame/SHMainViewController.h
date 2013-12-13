@@ -24,4 +24,5 @@
     __weak IBOutlet UILabel *mLab2;
     __weak IBOutlet UILabel *mLab1;
 }
+- (IBAction)btnShowOnTouch:(id)sender;
 @end
