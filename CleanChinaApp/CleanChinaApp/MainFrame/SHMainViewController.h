@@ -8,6 +8,7 @@
 
 #import "SHViewController.h"
 #import "SHLoadingViewController.h"
+#import "SHMainShowViewController.h"
 @interface SHMainViewController : SHViewController
 {
     __weak IBOutlet UIButton *mBtnYouk;
@@ -17,7 +18,8 @@
     __weak IBOutlet UIButton *mBtnNews;
     __weak IBOutlet UIView *mView;
     SHLoadingViewController * mLoadingViewController;
-    
+    SHMainShowViewController * mMainShowViewController;
+    UINavigationController* mNavigationViewController;
     __weak IBOutlet UILabel *mLab5;
     __weak IBOutlet UILabel *mLab4;
     __weak IBOutlet UILabel *mLab3;

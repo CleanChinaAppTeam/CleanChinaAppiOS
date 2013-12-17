@@ -7,7 +7,7 @@
 //
 
 #import "SHMainViewController.h"
-#import "MainShowViewController.h"
+#import "SHMainShowViewController.h"
 
 @interface SHMainViewController ()
 
@@ -36,6 +36,7 @@
 - (void)animation
 {
     [UIView beginAnimations:Nil context:Nil];
+    [UIView setAnimationDelay:3.1];
     [UIView setAnimationDuration:2];
     mBtnNews.frame = CGRectMake(4, 273, 46, 46  );
     mBtnBuss.frame = CGRectMake(50, 319, 58, 58  );
@@ -62,7 +63,7 @@
 - (void)loadSkin
 {
     [super loadSkin];
-    mView.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorStyleCellSelected"];
+    mView.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,10 +74,25 @@
 
 - (IBAction)btnShowOnTouch:(id)sender
 {
-//    MainShowViewController * controller = [[MainShowViewController alloc]init];
-//    controller.view;
-//    [self addChildViewController:controller];
-//    
-//    [self.view addSubview:controller.view];
+    //UINavigationController * controller  = [[UINavigationController alloc]init];
+    if(mNavigationViewController == nil){
+     mNavigationViewController = [[UINavigationController alloc]init];
+        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
+        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
+        mNavigationViewController.navigationBar.translucent = NO;
+        [self.view addSubview:mNavigationViewController.view];
+        
+        mMainShowViewController = [[SHMainShowViewController alloc]init];
+        [mNavigationViewController pushViewController:mMainShowViewController animated:NO];
+    }
+    
+    CGRect frame = mNavigationViewController.view.frame;
+    frame.origin.y = -frame.size.height;
+    mNavigationViewController.view.frame = frame;
+    frame.origin.y = 0;
+    [UIView beginAnimations:Nil context:Nil];
+    [UIView setAnimationDuration:0.5];
+    mNavigationViewController.view.frame = frame;
+    [UIView commitAnimations];
 }
 @end

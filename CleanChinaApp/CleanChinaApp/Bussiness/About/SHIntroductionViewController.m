@@ -1,18 +1,18 @@
 //
-//  MainShowViewController.m
+//  SHIntroductionViewController.m
 //  CleanChinaApp
 //
-//  Created by sheely.paean.Nightshade on 12/13/13.
+//  Created by sheely.paean.Nightshade on 12/18/13.
 //  Copyright (c) 2013 sheely.paean.coretest. All rights reserved.
 //
 
-#import "MainShowViewController.h"
+#import "SHIntroductionViewController.h"
 
-@interface MainShowViewController ()
+@interface SHIntroductionViewController ()
 
 @end
 
-@implementation MainShowViewController
+@implementation SHIntroductionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,8 +25,9 @@
 
 - (void)viewDidLoad
 {
+    self.title = @"展会介绍";
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning

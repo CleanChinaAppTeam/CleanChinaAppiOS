@@ -6,7 +6,7 @@
     <property name="FontScaleSmallBold" size = "15" type = "bold"/>
     <property name="FontScaleMidBold"   size = "17" type = "bold" />
     <property name="FontScaleLargeBold" size = "19" type = "bold"/>
-     <property name="FontScaleSupereBold" size = "25" type = "bold"/>
+    <property name="FontScaleSupereBold" size = "25" type = "bold"/>
 </Font>
 
 
