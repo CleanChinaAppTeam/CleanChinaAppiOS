@@ -77,8 +77,15 @@
     //UINavigationController * controller  = [[UINavigationController alloc]init];
     if(mNavigationViewController == nil){
      mNavigationViewController = [[UINavigationController alloc]init];
-        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
-        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
+        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+        mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
+        
+//        mNavigationViewController.navigationBar.backItem.backBarButtonItem.title = @"";
+//        mNavigationViewController.navigationBar.backItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+//        mNavigationViewController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+//        mNavigationViewController.navigationItem.backBarButtonItem.title = @"";
+
         mNavigationViewController.navigationBar.translucent = NO;
         [self.view addSubview:mNavigationViewController.view];
         

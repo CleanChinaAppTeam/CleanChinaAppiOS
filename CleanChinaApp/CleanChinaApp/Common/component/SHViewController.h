@@ -14,6 +14,7 @@
 }
 @property (nonatomic,strong) UIView * keybordView;
 @property (nonatomic,assign) int keybordheight;
+@property (nonatomic,assign) BOOL showBackItem;
 
 - (void)showWaitDialog:(NSString*)title state:(NSString*)state;
 

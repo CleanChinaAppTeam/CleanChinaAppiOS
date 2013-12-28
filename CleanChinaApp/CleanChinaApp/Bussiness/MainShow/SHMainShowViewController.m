@@ -8,7 +8,7 @@
 
 #import "SHMainShowViewController.h"
 #import "SHAboutViewController.h"
-
+#import "SHGoupengViewController.h"
 @interface SHMainShowViewController ()
 
 @end
@@ -45,6 +45,7 @@
 {
     [super loadSkin];
     mView.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
+      [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,17 +54,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)btnAboutOnTouch:(id)sender
+- (IBAction)btnGoupengOnTouch:(id)sender
 {
-    SHAboutViewController * controller = [[SHAboutViewController alloc]init];
-    //controller.view;
-    [self.navigationController pushViewController:controller animated:YES];
+    SHMainShowNavigationViewController * controller = [[SHMainShowNavigationViewController alloc]init];
+     [self.navigationController pushViewController:controller animated:YES];
 }
+
 
 - (IBAction)btnBack:(id)sender
 {
     [self dismiss];
 }
+
+- (IBAction)btnOnTouch:(UIButton*)sender
+{
+    SHMainShowNavigationViewController * controller = [[SHMainShowNavigationViewController alloc]init];
+    controller.index = sender.tag;
+    //controller.view;
+    [self.navigationController pushViewController:controller animated:YES];
+    //NSLog (self.navigationController.navigationBar.backItem);
+}
+
+- (IBAction)btnRegisterOnTouch:(id)sender
+{
+    SHRegisterViewController * controller = [[SHRegisterViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 -(void)dismiss
 {
     [UIView beginAnimations:Nil context:Nil];

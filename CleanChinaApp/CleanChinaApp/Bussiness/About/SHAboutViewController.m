@@ -28,7 +28,8 @@
 {
     [super viewDidLoad];
     self.title = @"关于展会";
-    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+//    self.navigationController.navigationController.navigationBar.backItem.title = @"";
+//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 
      // Do any additional setup after loading the view from its nib.
 }

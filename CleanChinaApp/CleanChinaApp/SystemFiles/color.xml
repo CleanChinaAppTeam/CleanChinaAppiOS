@@ -8,6 +8,7 @@
     <property name="ColorStyleBlack" R="0" G="0" B= "0" A="1" />
     <property name="ColorStyleCellLightGry" R="0" G="0" B= "0" A="0.3" />
     <property name="ColorBackGround" R="14" G="175" B= "251" A="1" />
+    <property name="ColorNavigationBackGround" R="0" G="140" B= "210" A="1" />
     <property name="ColorStyleCellSelected" R="14" G="175" B= "251" A="0.5" />
     <property name="ColorBase" R="204" G="204" B= "16" A="1" />
     <property name="ColorTabSelected" R="178" G="177" B= "172" A="1" />

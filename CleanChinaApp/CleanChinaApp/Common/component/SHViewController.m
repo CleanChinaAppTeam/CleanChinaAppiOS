@@ -18,7 +18,7 @@
 @implementation SHViewController
 @synthesize keybordView = _keybordView;
 @synthesize keybordheight;
-
+@synthesize showBackItem = _showBackItem;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,7 +37,7 @@
 //    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:button];
 //   // [self.navigationItem.backBarButtonItem setBackButtonBackgroundImage:nil forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
 	//initWithImage:[UIImage imageNamed:@"NaviBack"] target:self action:@selector(btnBack:)// Do any additional setup after loading the view.
-    if(self.navigationController.viewControllers.count > 1){
+    if(self.navigationController.viewControllers.count > 1 || self.showBackItem){
         UIBarButtonItem * barbutton = [[UIBarButtonItem alloc]initWithCustomView:button];
         self.navigationItem.leftBarButtonItem = barbutton;
     }

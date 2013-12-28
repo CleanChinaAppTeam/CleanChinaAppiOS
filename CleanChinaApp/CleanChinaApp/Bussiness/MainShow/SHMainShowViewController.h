@@ -7,6 +7,8 @@
 //
 
 #import "SHShowViewController.h"
+#import "SHMainShowNavigationViewController.h"
+#import "SHRegisterViewController.h"
 
 @interface SHMainShowViewController : SHViewController
 {
@@ -15,6 +17,8 @@
     __weak IBOutlet UIView *mView;
    // UINavigationController * mController;
 }
-- (IBAction)btnAboutOnTouch:(id)sender;
+- (IBAction)btnGoupengOnTouch:(id)sender;
 - (IBAction)btnBack:(id)sender;
+- (IBAction)btnOnTouch:(id)sender;
+- (IBAction)btnRegisterOnTouch:(id)sender;
 @end
