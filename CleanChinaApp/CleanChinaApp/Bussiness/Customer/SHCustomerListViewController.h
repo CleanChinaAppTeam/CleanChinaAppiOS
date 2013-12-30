@@ -11,6 +11,5 @@
 @interface SHCustomerListViewController : SHTableViewController<SHTaskDelegate>
 {
     __weak IBOutlet UITextField *mTxtField;
-    
 }
 @end

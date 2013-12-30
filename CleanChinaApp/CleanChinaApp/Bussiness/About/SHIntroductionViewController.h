@@ -8,6 +8,14 @@
 
 #import "SHViewController.h"
 
-@interface SHIntroductionViewController : SHViewController
+@interface SHIntroductionViewController : SHViewController<SHTaskDelegate>
 
+{
+    
+    __weak IBOutlet UILabel *mLabName;
+    __weak IBOutlet UILabel *mLabSummer;
+    __weak IBOutlet UILabel *mLabWeb;
+    __weak IBOutlet UILabel *mLabAddress;
+    __weak IBOutlet UILabel *mLabDate;
+}
 @end

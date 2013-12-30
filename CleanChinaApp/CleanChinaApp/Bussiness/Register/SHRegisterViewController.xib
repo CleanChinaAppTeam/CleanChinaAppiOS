@@ -6,6 +6,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHRegisterViewController">
             <connections>
+                <outlet property="mBarButton" destination="xOE-aV-2WR" id="QIE-gB-Rgl"/>
+                <outlet property="mTxtCity" destination="IpS-AJ-29j" id="Nx6-Fd-60u"/>
+                <outlet property="mTxtCompany" destination="WbM-2o-J7u" id="SUo-Kx-xs8"/>
+                <outlet property="mTxtEmail" destination="bp1-9g-DPT" id="IRg-GO-7vv"/>
+                <outlet property="mTxtName" destination="dxq-li-H8u" id="jht-GL-ihi"/>
+                <outlet property="mTxtPhone" destination="3r3-fj-1h8" id="nyt-4x-wm6"/>
+                <outlet property="mTxtProvince" destination="iZd-ba-t5K" id="clk-sT-Wfx"/>
+                <outlet property="mtxtAdress" destination="YVg-fK-1VD" id="xLg-2P-69M"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -141,9 +149,14 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <barButtonItem title="Item" id="xOE-aV-2WR"/>
+        <barButtonItem image="ic_ensure.png" id="xOE-aV-2WR">
+            <connections>
+                <action selector="btnSumbit:" destination="-1" id="uoR-cx-opD"/>
+            </connections>
+        </barButtonItem>
     </objects>
     <resources>
+        <image name="ic_ensure.png" width="30" height="30"/>
         <image name="img_textbox.png" width="340" height="48"/>
     </resources>
 </document>

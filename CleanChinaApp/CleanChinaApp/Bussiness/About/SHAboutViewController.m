@@ -8,6 +8,7 @@
 
 #import "SHAboutViewController.h"
 #import "SHIntroductionViewController.h"
+#import "SHTempletImageViewController.h"
 
 @interface SHAboutViewController ()
 
@@ -71,7 +72,40 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SHIntroductionViewController * controller = [[SHIntroductionViewController alloc]init];
-    [self.navigationController pushViewController:controller animated:YES];
+    if(indexPath.row == 0){
+        SHIntroductionViewController * controller = [[SHIntroductionViewController alloc]init];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else if (indexPath.row == 1){
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"如何参观";
+        controller.func = @"expo1";
+        [self.navigationController pushViewController:controller animated:YES];
+    }else if (indexPath.row == 2){
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"酒店住宿";
+        controller.func = @"expo2";
+        [self.navigationController pushViewController:controller animated:YES];
+    }else if (indexPath.row == 3){
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"免费班车";
+        controller.func = @"expo3";
+        [self.navigationController pushViewController:controller animated:YES];
+    }else if (indexPath.row == 4){
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"停车服务";
+        controller.func = @"expo4";
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
+}
+
+- (void)taskDidFinished:(SHTask *)task
+{
+    [self dismissWaitDialog];
+}
+- (void)taskDidFailed:(SHTask *)task
+{
+    [self dismissWaitDialog];
+    [task.respinfo show];
 }
 @end

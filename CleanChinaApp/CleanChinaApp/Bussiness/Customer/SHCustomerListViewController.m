@@ -7,7 +7,7 @@
 //
 
 #import "SHCustomerListViewController.h"
-
+#import  "SHCustomerDetailViewController.h"
 @interface SHCustomerListViewController ()
 
 @end
@@ -27,18 +27,23 @@
 {
     [super viewDidLoad];
     self.title = @"展商查询";
+    [self request:@""];
+    // Do any additional setup after loading the view from its nib.
+}
+
+- (void)request:(NSString*) msg;
+{
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
-//    post.URL = URL_FOR(@"company&identication={\"type\":\"basic\",\"password\":\"test123\",\"username\":\"admin\",\"imei\":\"0a97e5810d5177a6\",\"info\":\"systemModel:iPad\",\"version\":\"1.2\"}&data={querykey:\"\"}");
-//    //[post.postArgs setValue:@\"\" forKey:@\"querykey\"];
-    post.URL = URL_FOR(@"function=company");
+    post.URL = URL_FOR(@"company");
+    [post.postArgs setValue:msg forKey:@"querykey"];
     post.delegate = self;
     [post start];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)taskDidFinished:(SHTask *)task
 {
-    
+    mList = task.result;
+    [self.tableView reloadData];
 }
 - (void)taskDidFailed:(SHTask *)task
 {
@@ -53,7 +58,13 @@
 
 - (int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    NSDictionary * dic = [mList objectAtIndex:section];
+    return [[dic valueForKey:@"company"] count];
+}
+
+- (int) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return mList.count;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -63,9 +74,18 @@
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSDictionary * dic = [[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row];
     SHTableViewGeneralCell * cell = [tableView dequeueReusableGeneralCell];
     cell.labTitle.userstyle = @"labmidlight";
-    cell.labTitle.text = @"长江集团";
+    cell.labTitle.text = [dic valueForKey:@"companyname"];
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    SHCustomerDetailViewController * controller = [[SHCustomerDetailViewController alloc] init];
+    controller.companyid = [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyid"];
+    controller.title =  [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyname"];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 @end

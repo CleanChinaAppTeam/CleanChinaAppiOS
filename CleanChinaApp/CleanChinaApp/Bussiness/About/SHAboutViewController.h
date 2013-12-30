@@ -8,6 +8,6 @@
 
 #import "SHViewController.h"
 
-@interface SHAboutViewController : SHViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SHAboutViewController : SHViewController<UITableViewDataSource,UITableViewDelegate,SHTaskDelegate>
 
 @end

@@ -9,10 +9,9 @@
 #import "Core.h"
 #import "common.h"
 //#define URL_HEADER @ "http://192.168.1.206:8091"
-#define URL_HEADER @ "http://112.124.22.156/clean/CleanChina/json2.aspx?"
+#define URL_HEADER @ "http://112.124.22.156/clean/CleanChina/data.ashx?function="
 #define URL_BATA @ "http://192.168.11.194"
 #define URL_DEVELOPER @ "http://112.124.22.156/clean/CleanChina/data.ashx?function="
-
 #define URL_FOR(a) [NSString stringWithFormat:@"%@%@",URL_HEADER,a];
 
 #define DEVICE_TOKEN @"DeviceTokenStringKEY"

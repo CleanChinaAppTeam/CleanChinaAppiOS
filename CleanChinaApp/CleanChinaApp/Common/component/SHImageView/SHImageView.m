@@ -56,14 +56,32 @@
 }
 - (void)taskDidFinished:(SHTask *)task
 {
-    NSDictionary * result = (NSDictionary*)task.result;
-    NSString * base64 =[result valueForKey:@"image"];
-    //[base64 cStringUsingEncoding:NSASCIIStringEncoding];
-    NSData * data = [Base64 decode:base64];
-    self.mark = [result valueForKey:@"description"];
-    self.image = [[UIImage alloc]initWithData:data];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
-        [self.delegate imageViewDidLoadFinished];
+    if([task.result isKindOfClass:[NSDictionary class]] || [task.result isKindOfClass:[NSMutableDictionary class]]){
+        NSDictionary * result = (NSDictionary*)task.result;
+        NSString * base64 =[result valueForKey:@"image"];
+        //[base64 cStringUsingEncoding:NSASCIIStringEncoding];
+        NSData * data = [Base64 decode:base64];
+        self.mark = [result valueForKey:@"description"];
+        self.image = [[UIImage alloc]initWithData:data];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
+            [self.delegate imageViewDidLoadFinished];
+        }
+    }else if ([task.result isKindOfClass:[NSDate class]] || [task.result isKindOfClass:[NSMutableData class]]){
+        self.image = [[UIImage alloc]initWithData:task.result];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
+            [self.delegate imageViewDidLoadFinished];
+        }
+    }else
+    {
+        @try{
+            self.image = [[UIImage alloc]initWithData:task.result];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
+                [self.delegate imageViewDidLoadFinished];
+            }
+        }
+        @catch (NSException * e) {
+            
+        }
     }
     [mIndicatorview stopAnimating];
 }

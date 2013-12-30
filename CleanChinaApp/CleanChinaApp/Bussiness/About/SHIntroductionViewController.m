@@ -27,6 +27,12 @@
 {
     self.title = @"展会介绍";
     [super viewDidLoad];
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"expo");
+    post.delegate = self;
+    [post start];
+   // [post.postArgs setValue:@"" forKey:@""]
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,5 +41,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (void)taskDidFinished:(SHTask *)task
+{
+    [self dismissWaitDialog];
+    mLabAddress.text = [NSString stringWithFormat:@"地址:%@",[task.result valueForKey:@"address"]];
+    mLabName.text = [task.result valueForKey:@"name"];
+    mLabDate.text = [NSString stringWithFormat:@"日期:%@",[task.result valueForKey:@"date"]];
+    mLabSummer.text = [task.result valueForKey:@"summary"];
+    mLabWeb.text = [NSString stringWithFormat:@"网址:%@",[task.result valueForKey:@"website"]];
+    [mLabSummer sizeToFit];
+}
 
+ -(void)taskDidFailed:(SHTask *)task
+{
+    [self dismissWaitDialog];
+}
 @end
