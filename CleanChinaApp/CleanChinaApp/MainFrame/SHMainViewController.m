@@ -33,6 +33,10 @@
     [self animation];
     // Do any additional setup after loading the view from its nib.
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+        [self.navigationController setNavigationBarHidden:YES];
+}
 - (void)animation
 {
     [UIView beginAnimations:Nil context:Nil];
@@ -72,34 +76,47 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnBussinessOnTouch:(id)sender
+{
+    SHWebViewController * controller = [[SHWebViewController alloc]init];
+    controller.title = @"清洁用品商城";
+    controller.URL = @"http://www.chinacleanexpo.com/Home/tabid/958/language/zh-CN/Default.aspx";
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (IBAction)btnShowOnTouch:(id)sender
 {
     //UINavigationController * controller  = [[UINavigationController alloc]init];
-    if(mNavigationViewController == nil){
-     mNavigationViewController = [[UINavigationController alloc]init];
-        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-        mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
-        
-//        mNavigationViewController.navigationBar.backItem.backBarButtonItem.title = @"";
-//        mNavigationViewController.navigationBar.backItem.backBarButtonItem.tintColor = [UIColor whiteColor];
-//        mNavigationViewController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
-//        mNavigationViewController.navigationItem.backBarButtonItem.title = @"";
+//    if(mNavigationViewController == nil){
+//     mNavigationViewController = [[UINavigationController alloc]init];
+//        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+//        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+//        mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
+//        
+////        mNavigationViewController.navigationBar.backItem.backBarButtonItem.title = @"";
+////        mNavigationViewController.navigationBar.backItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+////        mNavigationViewController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
+////        mNavigationViewController.navigationItem.backBarButtonItem.title = @"";
+//
+//        mNavigationViewController.navigationBar.translucent = NO;
+//        [self.view addSubview:mNavigationViewController.view];
+//        
+//        mMainShowViewController = [[SHMainShowViewController alloc]init];
+//        [mNavigationViewController pushViewController:mMainShowViewController animated:NO];
+//    }
+//    
 
-        mNavigationViewController.navigationBar.translucent = NO;
-        [self.view addSubview:mNavigationViewController.view];
-        
-        mMainShowViewController = [[SHMainShowViewController alloc]init];
-        [mNavigationViewController pushViewController:mMainShowViewController animated:NO];
-    }
-    
-    CGRect frame = mNavigationViewController.view.frame;
+    mMainShowViewController = [[SHMainShowViewController alloc]init];
+    [self addChildViewController:mMainShowViewController];
+    [self.view addSubview:mMainShowViewController.view];
+    CGRect frame = mMainShowViewController.view.frame;
     frame.origin.y = -frame.size.height;
-    mNavigationViewController.view.frame = frame;
+    mMainShowViewController.view.frame = frame;
     frame.origin.y = 0;
     [UIView beginAnimations:Nil context:Nil];
     [UIView setAnimationDuration:0.5];
-    mNavigationViewController.view.frame = frame;
+    mMainShowViewController.view.frame = frame;
     [UIView commitAnimations];
 }
+
 @end

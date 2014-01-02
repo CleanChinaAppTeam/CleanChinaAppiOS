@@ -1,39 +1,36 @@
 //
-//  SHAboutViewController.m
+//  SHSceneViewController.m
 //  CleanChinaApp
 //
-//  Created by sheely.paean.Nightshade on 12/18/13.
-//  Copyright (c) 2013 sheely.paean.coretest. All rights reserved.
+//  Created by sheely.paean.Nightshade on 1/1/14.
+//  Copyright (c) 2014 sheely.paean.coretest. All rights reserved.
 //
 
-#import "SHAboutViewController.h"
-#import "SHIntroductionViewController.h"
-#import "SHTempletImageViewController.h"
 #import "SHSceneViewController.h"
 
-@interface SHAboutViewController ()
+@interface SHSceneViewController ()
 
 @end
 
-@implementation SHAboutViewController
+@implementation SHSceneViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-            }
+    }
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"关于展会";
-//    self.navigationController.navigationController.navigationBar.backItem.title = @"";
-//    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-
-     // Do any additional setup after loading the view from its nib.
+    self.title = @"现场服务";
+    //    self.navigationController.navigationController.navigationBar.backItem.title = @"";
+    //    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -46,17 +43,17 @@
     SHTableViewGeneralCell * cell = [tableView dequeueReusableGeneralCell];
     cell.labTitle.userstyle = @"labmidlight";
     if(indexPath.row == 0){
-        cell.labTitle.text = @"展会介绍";
+        cell.labTitle.text = @"餐饮";
     }else  if(indexPath.row == 1){
-        cell.labTitle.text = @"如何参观";
+        cell.labTitle.text = @"网络";
     }else  if(indexPath.row == 2){
-        cell.labTitle.text = @"酒店住宿";
+        cell.labTitle.text = @"洗手间";
     }else  if(indexPath.row == 3){
-        cell.labTitle.text = @"免费班车";
+        cell.labTitle.text = @"礼品";
     }else  if(indexPath.row == 4){
-        cell.labTitle.text = @"停车服务";
+        cell.labTitle.text = @"主办方办公室";
     }else  if(indexPath.row == 5){
-        cell.labTitle.text = @"现场服务";
+        cell.labTitle.text = @"VIP休息区";
     }
     return cell;
 }
@@ -73,34 +70,36 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0){
-        SHIntroductionViewController * controller = [[SHIntroductionViewController alloc]init];
+    if (indexPath.row == 0){
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"餐饮";
+        controller.func = @"expo5";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 1){
         SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
-        controller.title = @"如何参观";
-        controller.func = @"expo1";
+        controller.title = @"网络";
+        controller.func = @"expo6";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 2){
         SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
-        controller.title = @"酒店住宿";
-        controller.func = @"expo2";
+        controller.title = @"洗手间";
+        controller.func = @"expo7";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 3){
         SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
-        controller.title = @"免费班车";
-        controller.func = @"expo3";
+        controller.title = @"礼品";
+        controller.func = @"expo8";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 4){
         SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
-        controller.title = @"停车服务";
-        controller.func = @"expo4";
+        controller.title = @"主办方办公室";
+        controller.func = @"expo9";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 5){
-        SHSceneViewController * controller = [[SHSceneViewController alloc]init];
-        controller.title = @"现场服务";
+        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        controller.title = @"VIP休息区";
+        controller.func = @"expo10";
         [self.navigationController pushViewController:controller animated:YES];
-
     }
     
 }

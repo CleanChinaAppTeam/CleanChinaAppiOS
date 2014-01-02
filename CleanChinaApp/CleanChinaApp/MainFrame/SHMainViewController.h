@@ -19,12 +19,14 @@
     __weak IBOutlet UIView *mView;
     SHLoadingViewController * mLoadingViewController;
     SHMainShowViewController * mMainShowViewController;
-    UINavigationController* mNavigationViewController;
     __weak IBOutlet UILabel *mLab5;
     __weak IBOutlet UILabel *mLab4;
     __weak IBOutlet UILabel *mLab3;
     __weak IBOutlet UILabel *mLab2;
     __weak IBOutlet UILabel *mLab1;
 }
+
+- (IBAction)btnBussinessOnTouch:(id)sender;
+
 - (IBAction)btnShowOnTouch:(id)sender;
 @end

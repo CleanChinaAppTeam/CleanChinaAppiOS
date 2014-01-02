@@ -16,7 +16,20 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     mMainViewController = [[SHMainViewController alloc]init];
-    self.window.rootViewController = mMainViewController;
+   
+//    UINavigationController* mNavigationViewController = [[UINavigationController alloc]initWithRootViewController:mMainViewController];
+  UINavigationController* mNavigationViewController = [[UINavigationController alloc]init];
+    [mNavigationViewController pushViewController:mMainViewController animated:NO];
+    mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+    mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+    mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
+
+    mNavigationViewController.navigationBar.translucent = NO;
+//    [mNavigationViewController.navigationBar setHidden:YES];
+//    [self.view addSubview:mNavigationViewController.view];
+
+     self.window.rootViewController = mNavigationViewController;
+    
     [self.window makeKeyAndVisible];
     //self.w
     return YES;

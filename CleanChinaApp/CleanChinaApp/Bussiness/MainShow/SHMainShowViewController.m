@@ -88,7 +88,7 @@
     //[super dismiss];
     CGRect frame = self.navigationController.view.frame;
     frame.origin.y = -frame.size.height;
-    self.navigationController.view.frame = frame;
+    self.view.frame = frame;
     [UIView commitAnimations];
 }
 
