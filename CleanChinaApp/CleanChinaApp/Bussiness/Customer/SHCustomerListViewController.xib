@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHCustomerListViewController">
             <connections>
+                <outlet property="btnCharacter" destination="XXI-3o-hCh" id="CFt-3y-mN3"/>
+                <outlet property="btnProduct" destination="wRL-RI-jKZ" id="qLk-rJ-rEG"/>
                 <outlet property="mTxtField" destination="s2g-BJ-jnp" id="BEx-Be-ZwR"/>
                 <outlet property="tableView" destination="WjA-I2-ksY" id="wD7-bf-dDJ"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -40,7 +42,11 @@
                             <state key="normal" title="A-Z" backgroundImage="img_unselected.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" backgroundImage="img_selected.png"/>
                             <state key="highlighted" backgroundImage="img_selected.png"/>
+                            <connections>
+                                <action selector="btnCharacterOnTouch:" destination="-1" eventType="touchUpInside" id="X4o-Ex-s3s"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wRL-RI-jKZ">
                             <rect key="frame" x="263" y="12" width="44" height="26"/>
@@ -50,13 +56,20 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <state key="selected" backgroundImage="img_selected.png"/>
                             <state key="highlighted" backgroundImage="img_selected.png"/>
+                            <connections>
+                                <action selector="btnProductOnTouch:" destination="-1" eventType="touchUpInside" id="PQU-Le-RiB"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入..." minimumFontSize="17" id="s2g-BJ-jnp">
                             <rect key="frame" x="35" y="10" width="168" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="78z-9g-yRX"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.74509803921568629" green="0.74509803921568629" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>

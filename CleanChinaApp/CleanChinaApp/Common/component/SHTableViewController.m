@@ -25,16 +25,22 @@
     return self;
 }
 
+- (void) loadSkin
+{
+    [super loadSkin];
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
 - (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0;
 }
 
-- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (UILabel*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, 44)];
     label.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
-    label.userstyle = @"labmidmilk";
+    //label.userstyle = @"labmidmilk";
     label.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
     label.textAlignment = NSTextAlignmentCenter;
     return label;
@@ -43,7 +49,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundColor = [UIColor clearColor];
+  
 	// Do any additional setup after loading the view.
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/Bussiness/MainShow/SHMainShowViewController.m"
-            timestampString = "410500636.929282"
+            timestampString = "410610349.429796"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "-btnGoupengOnTouch:"
             landmarkType = "5">
          </BreakpointContent>

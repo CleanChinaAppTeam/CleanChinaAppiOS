@@ -223,6 +223,10 @@
 		9E54B1F51879147C00F2787A /* SHElectorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B1F31879147C00F2787A /* SHElectorDetailViewController.xib */; };
 		9E54B1F9187914E200F2787A /* SHElectrnicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B1F7187914E200F2787A /* SHElectrnicView.m */; };
 		9E54B1FA187914E200F2787A /* SHElectrnicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B1F8187914E200F2787A /* SHElectrnicView.xib */; };
+		9E54B1FF1879646200F2787A /* SHBBSListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B1FD1879646200F2787A /* SHBBSListViewController.m */; };
+		9E54B2001879646200F2787A /* SHBBSListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B1FE1879646200F2787A /* SHBBSListViewController.xib */; };
+		9E54B2041879B86A00F2787A /* SHBBSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B2021879B86A00F2787A /* SHBBSDetailViewController.m */; };
+		9E54B2051879B86A00F2787A /* SHBBSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B2031879B86A00F2787A /* SHBBSDetailViewController.xib */; };
 		9E7BF25E18608A6D00325186 /* ic_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25D18608A6D00325186 /* ic_up.png */; };
 		9E7BF26118608B2800325186 /* ic_about_ac.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25F18608B2800325186 /* ic_about_ac.png */; };
 		9E7BF26218608B2800325186 /* ic_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF26018608B2800325186 /* ic_about.png */; };
@@ -595,6 +599,12 @@
 		9E54B1F6187914E200F2787A /* SHElectrnicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHElectrnicView.h; sourceTree = "<group>"; };
 		9E54B1F7187914E200F2787A /* SHElectrnicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHElectrnicView.m; sourceTree = "<group>"; };
 		9E54B1F8187914E200F2787A /* SHElectrnicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHElectrnicView.xib; sourceTree = "<group>"; };
+		9E54B1FC1879646200F2787A /* SHBBSListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBBSListViewController.h; sourceTree = "<group>"; };
+		9E54B1FD1879646200F2787A /* SHBBSListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBBSListViewController.m; sourceTree = "<group>"; };
+		9E54B1FE1879646200F2787A /* SHBBSListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHBBSListViewController.xib; sourceTree = "<group>"; };
+		9E54B2011879B86A00F2787A /* SHBBSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBBSDetailViewController.h; sourceTree = "<group>"; };
+		9E54B2021879B86A00F2787A /* SHBBSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBBSDetailViewController.m; sourceTree = "<group>"; };
+		9E54B2031879B86A00F2787A /* SHBBSDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHBBSDetailViewController.xib; sourceTree = "<group>"; };
 		9E7BF25D18608A6D00325186 /* ic_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_up.png; sourceTree = "<group>"; };
 		9E7BF25F18608B2800325186 /* ic_about_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about_ac.png; sourceTree = "<group>"; };
 		9E7BF26018608B2800325186 /* ic_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about.png; sourceTree = "<group>"; };
@@ -901,6 +911,7 @@
 		9E1ECCA5184AD1AE003ECD5F /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				9E54B1FB1879643B00F2787A /* BBS */,
 				9E54B1EB18788DF600F2787A /* ElectronicJournals */,
 				9E54B1DB1877AEE500F2787A /* Prize */,
 				9E54B1CF1875C50300F2787A /* News */,
@@ -1364,6 +1375,19 @@
 			path = ElectronicJournals;
 			sourceTree = "<group>";
 		};
+		9E54B1FB1879643B00F2787A /* BBS */ = {
+			isa = PBXGroup;
+			children = (
+				9E54B1FC1879646200F2787A /* SHBBSListViewController.h */,
+				9E54B1FD1879646200F2787A /* SHBBSListViewController.m */,
+				9E54B1FE1879646200F2787A /* SHBBSListViewController.xib */,
+				9E54B2011879B86A00F2787A /* SHBBSDetailViewController.h */,
+				9E54B2021879B86A00F2787A /* SHBBSDetailViewController.m */,
+				9E54B2031879B86A00F2787A /* SHBBSDetailViewController.xib */,
+			);
+			path = BBS;
+			sourceTree = "<group>";
+		};
 		9E7BF27D1860B30000325186 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -1541,6 +1565,7 @@
 				9E33DC0418589E53008C61AC /* blackArrow.png in Resources */,
 				9E33DC1018589E53008C61AC /* NaviBack@2x.png in Resources */,
 				9E33DC0F18589E53008C61AC /* NaviBack.png in Resources */,
+				9E54B2001879646200F2787A /* SHBBSListViewController.xib in Resources */,
 				9E33DC3418589E53008C61AC /* SHTableViewGeneralCell.xib in Resources */,
 				9E7BF2661860A23900325186 /* ic_show_plain.png in Resources */,
 				9E33DC0118589E53008C61AC /* DSLCalendarDaySelection.png in Resources */,
@@ -1602,6 +1627,7 @@
 				9E7BF2691860A47100325186 /* ic_show_search_ac.png in Resources */,
 				9E1ECCA3184AD198003ECD5F /* img_wave.png in Resources */,
 				9E54B1DA1875CE4800F2787A /* SHImageContentViewController.xib in Resources */,
+				9E54B2051879B86A00F2787A /* SHBBSDetailViewController.xib in Resources */,
 				9E0FC5AD18691A1A008D3585 /* ic_goupeng_ac.png in Resources */,
 				9E7BF2721860A51300325186 /* ic_show_gold.png in Resources */,
 				9E33DC2E18589E53008C61AC /* ic_re_error@2x.png in Resources */,
@@ -1682,6 +1708,7 @@
 				9E33DC4C18589E53008C61AC /* VRGCalendarView.m in Sources */,
 				9E54B1DF1877AF0D00F2787A /* SHPrizeViewController.m in Sources */,
 				9E54B1D91875CE4800F2787A /* SHImageContentViewController.m in Sources */,
+				9E54B1FF1879646200F2787A /* SHBBSListViewController.m in Sources */,
 				9E33DC2518589E53008C61AC /* SHNavigationShowViewController.m in Sources */,
 				9E33DBEC18589E53008C61AC /* SHDatePopoverController.m in Sources */,
 				9E33DC4018589E53008C61AC /* WTStatusView.m in Sources */,
@@ -1691,6 +1718,7 @@
 				9E33DC3518589E53008C61AC /* SHTableViewTitleContentBottomCell.m in Sources */,
 				9E7BF2861860C72600325186 /* SHIntroductionViewController.m in Sources */,
 				9E54B1F9187914E200F2787A /* SHElectrnicView.m in Sources */,
+				9E54B2041879B86A00F2787A /* SHBBSDetailViewController.m in Sources */,
 				9E04DDAB1873DB65000E8BC7 /* SHSceneViewController.m in Sources */,
 				9E33DC3D18589E53008C61AC /* SHView.m in Sources */,
 				9E33DC1718589E53008C61AC /* MMProgressHUD+Animations.m in Sources */,

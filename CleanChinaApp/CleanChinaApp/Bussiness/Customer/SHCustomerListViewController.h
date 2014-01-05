@@ -8,8 +8,13 @@
 
 #import "SHViewController.h"
 
-@interface SHCustomerListViewController : SHTableViewController<SHTaskDelegate>
+@interface SHCustomerListViewController : SHTableViewController<SHTaskDelegate,UITextFieldDelegate>
 {
+    __weak IBOutlet UIButton *btnProduct;
     __weak IBOutlet UITextField *mTxtField;
+    __weak IBOutlet UIButton *btnCharacter;
+    NSNumber * mSearchType;
 }
+- (IBAction)btnCharacterOnTouch:(id)sender;
+- (IBAction)btnProductOnTouch:(id)sender;
 @end

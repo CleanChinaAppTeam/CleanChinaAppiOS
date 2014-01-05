@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    mSearchType = [NSNumber numberWithInt:1];
     self.title = @"展商查询";
     [self request:@""];
     // Do any additional setup after loading the view from its nib.
@@ -33,21 +34,49 @@
 
 - (void)request:(NSString*) msg;
 {
+    [self showWaitDialogForNetWork];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"company");
     [post.postArgs setValue:msg forKey:@"querykey"];
+    [post.postArgs setValue:mSearchType forKey:@"sortby"];
     post.delegate = self;
     [post start];
 }
 
 - (void)taskDidFinished:(SHTask *)task
 {
-    mList = task.result;
+    [self dismissWaitDialog];
+    mList = (NSArray*)task.result;
     [self.tableView reloadData];
 }
 - (void)taskDidFailed:(SHTask *)task
 {
+    [self dismissWaitDialog];
+}
+
+
+- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    NSDictionary * dic = [mList objectAtIndex:section];
+    UILabel * lab = [super tableView:tableView viewForHeaderInSection:section];
+    lab.backgroundColor = [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1];
+    lab.textAlignment = NSTextAlignmentLeft;
+    lab.userstyle = @"labmiddark";
+    lab.text = [NSString stringWithFormat:@"   %@",[dic valueForKey:@"sectionname"]];
+    return lab;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
+    NSString *key = [[mList objectAtIndex:section] valueForKey:@"sectionname"];
+    return key;
+    
+}
+
+
+- (float) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 18;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,9 +96,10 @@
     return mList.count;
 }
 
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 30;
+    return 36;
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,11 +111,47 @@
     return cell;
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    
+    NSArray * array = [mList valueForKey:@"sectionname"];
+    return array;
+    
+}
+
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SHCustomerDetailViewController * controller = [[SHCustomerDetailViewController alloc] init];
     controller.companyid = [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyid"];
     controller.title =  [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyname"];
     [self.navigationController pushViewController:controller animated:YES];
+}
+- (IBAction)btnCharacterOnTouch:(id)sender
+{
+    btnCharacter.selected = YES;
+    btnProduct.selected = NO;
+    mSearchType = [NSNumber numberWithInt:1];
+    mTxtField.text = @"";
+    [self request:mTxtField.text];
+}
+
+- (IBAction)btnProductOnTouch:(id)sender
+{
+    btnCharacter.selected = NO;
+    btnProduct.selected = YES;
+    mSearchType = [NSNumber numberWithInt:2];
+    mTxtField.text = @"";
+    [self request:mTxtField.text];
+
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self request:mTxtField.text];
+}
+// may be called if forced even if shouldEndEditing returns NO (e.g. view removed from window) or endEditing:YES called
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    return [mTxtField resignFirstResponder];
 }
 @end

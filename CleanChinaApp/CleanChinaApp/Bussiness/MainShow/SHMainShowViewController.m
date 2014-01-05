@@ -10,6 +10,7 @@
 #import "SHAboutViewController.h"
 #import "SHGoupengViewController.h"
 #import "SHPrizeViewController.h"
+#import "SHBBSListViewController.h"
 
 @interface SHMainShowViewController ()
 
@@ -86,6 +87,12 @@
 - (IBAction)btnPrizeOnTouch:(id)sender
 {
     SHPrizeViewController * controller = [[SHPrizeViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)btnBBSOnTouch:(id)sender
+{
+    SHBBSListViewController * controller  = [[SHBBSListViewController alloc]init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
