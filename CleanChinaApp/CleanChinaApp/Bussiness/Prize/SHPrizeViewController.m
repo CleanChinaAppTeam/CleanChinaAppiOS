@@ -8,6 +8,7 @@
 
 #import "SHPrizeViewController.h"
 #import "SHPrizeCustomListViewController.h"
+#import "SHPrizeViewController.h"
 
 @interface SHPrizeViewController ()
 

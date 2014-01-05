@@ -98,11 +98,8 @@
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     SHBBSDetailViewController * controller = [[SHBBSDetailViewController alloc]init];
     controller.forum_id = [dic valueForKey:@"forum_id"];
+    controller.title = [dic valueForKey:@"forum_name"];
     [self.navigationController pushViewController:controller animated:YES];
-//    SHCustomerDetailViewController * controller = [[SHCustomerDetailViewController alloc] init];
-//    controller.companyid = [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyid"];
-//    controller.title =  [[[[mList objectAtIndex:indexPath.section] valueForKey:@"company"] objectAtIndex:indexPath.row] valueForKey:@"companyname"];
-//    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField

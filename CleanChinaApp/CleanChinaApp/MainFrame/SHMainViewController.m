@@ -29,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+     [self.navigationController setNavigationBarHidden:YES animated:NO];
     mLoadingViewController =  [[SHLoadingViewController alloc]init ];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"advertise");
@@ -148,6 +149,12 @@
     [UIView setAnimationDuration:0.5];
     mMainShowViewController.view.frame = frame;
     [UIView commitAnimations];
+}
+
+- (IBAction)btnWeiboOnTouch:(id)sender
+{
+    SHWeiboListViewController * controller = [[SHWeiboListViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)btnBookOnTouch:(id)sender

@@ -75,6 +75,9 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted" image="ic_youku_ac.png"/>
+                    <connections>
+                        <action selector="btnWeiboOnTouch:" destination="-1" eventType="touchUpInside" id="bPW-J8-7SI"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" id="yUM-v6-DWb">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="212"/>

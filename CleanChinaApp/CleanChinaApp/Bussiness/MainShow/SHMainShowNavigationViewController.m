@@ -42,9 +42,11 @@
 
 - (void)setIndex:(int)index
 {
-    UIButton * button = [[UIButton alloc]init];
-    button.tag = index;
-    [self btnItemOnTouch:button];
+    if(self.view){
+        UIButton * button = [mViewBottom.subviews objectAtIndex:index];
+        //button.tag = index;
+        [self btnItemOnTouch:button];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +57,12 @@
 
 - (IBAction)btnItemOnTouch:(UIButton*)sender
 {
+    for (UIButton * view in mViewBottom.subviews) {
+        if([view isKindOfClass:[UIButton class]]){
+            view.selected = NO;
+        }
+    }
+    sender.selected = YES;
     
     SHViewController * controller ;
     if(sender.tag == 0){
@@ -77,10 +85,25 @@
         }
         controller = mgoupengviewcontroller;
     }
+    else if (sender.tag == 2){
+        if(mgoupengviewcontroller == nil){
+            mgoupengviewcontroller = [[SHGoupengViewController alloc]init];
+        }
+        controller = mgoupengviewcontroller;
+    }
+    else if (sender.tag == 3){
+        if(prizeviewcontroller == nil){
+            prizeviewcontroller = [[SHPrizeViewController alloc]init];
+        }
+        controller = prizeviewcontroller;
+    }
+    
     //controller.navigationController = self.navigationController;
-    self.showBackItem = YES;
+    controller.showBackItem = YES;
+
     [self addChildViewController:controller];
     [self.view addSubview:controller.view];
+    controller.view.backgroundColor = self.view.backgroundColor;
     self.title = controller.title;
     CGRect frame = self.view.bounds;
     frame.size.height -= 50;

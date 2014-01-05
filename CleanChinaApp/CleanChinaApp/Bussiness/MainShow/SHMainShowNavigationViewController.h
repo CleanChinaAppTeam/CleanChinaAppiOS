@@ -10,6 +10,7 @@
 #import "SHGoupengViewController.h"
 #import "SHAboutViewController.h"
 #import "SHCustomerListViewController.h"
+#import "SHPrizeViewController.h"
 
 @interface SHMainShowNavigationViewController : SHViewController
 {
@@ -18,6 +19,7 @@
     SHAboutViewController * maboutviewcontroller;
     SHGoupengViewController *mgoupengviewcontroller;
     SHCustomerListViewController * customerlistviewcontroller;
+    SHPrizeViewController * prizeviewcontroller;
 }
 
 @property (nonatomic,assign) int index;

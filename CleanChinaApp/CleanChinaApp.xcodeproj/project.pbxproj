@@ -227,6 +227,10 @@
 		9E54B2001879646200F2787A /* SHBBSListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B1FE1879646200F2787A /* SHBBSListViewController.xib */; };
 		9E54B2041879B86A00F2787A /* SHBBSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B2021879B86A00F2787A /* SHBBSDetailViewController.m */; };
 		9E54B2051879B86A00F2787A /* SHBBSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B2031879B86A00F2787A /* SHBBSDetailViewController.xib */; };
+		9E54B20C1879CA5500F2787A /* SHWeiboListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B20A1879CA5500F2787A /* SHWeiboListViewController.m */; };
+		9E54B20D1879CA5500F2787A /* SHWeiboListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B20B1879CA5500F2787A /* SHWeiboListViewController.xib */; };
+		9E54B2101879CA8A00F2787A /* SHWeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B20F1879CA8A00F2787A /* SHWeiboView.m */; };
+		9E54B2121879CA9C00F2787A /* SHWeiboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B2111879CA9C00F2787A /* SHWeiboView.xib */; };
 		9E7BF25E18608A6D00325186 /* ic_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25D18608A6D00325186 /* ic_up.png */; };
 		9E7BF26118608B2800325186 /* ic_about_ac.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25F18608B2800325186 /* ic_about_ac.png */; };
 		9E7BF26218608B2800325186 /* ic_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF26018608B2800325186 /* ic_about.png */; };
@@ -605,6 +609,12 @@
 		9E54B2011879B86A00F2787A /* SHBBSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHBBSDetailViewController.h; sourceTree = "<group>"; };
 		9E54B2021879B86A00F2787A /* SHBBSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHBBSDetailViewController.m; sourceTree = "<group>"; };
 		9E54B2031879B86A00F2787A /* SHBBSDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHBBSDetailViewController.xib; sourceTree = "<group>"; };
+		9E54B2091879CA5500F2787A /* SHWeiboListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeiboListViewController.h; sourceTree = "<group>"; };
+		9E54B20A1879CA5500F2787A /* SHWeiboListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeiboListViewController.m; sourceTree = "<group>"; };
+		9E54B20B1879CA5500F2787A /* SHWeiboListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHWeiboListViewController.xib; sourceTree = "<group>"; };
+		9E54B20E1879CA8A00F2787A /* SHWeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeiboView.h; sourceTree = "<group>"; };
+		9E54B20F1879CA8A00F2787A /* SHWeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeiboView.m; sourceTree = "<group>"; };
+		9E54B2111879CA9C00F2787A /* SHWeiboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHWeiboView.xib; sourceTree = "<group>"; };
 		9E7BF25D18608A6D00325186 /* ic_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_up.png; sourceTree = "<group>"; };
 		9E7BF25F18608B2800325186 /* ic_about_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about_ac.png; sourceTree = "<group>"; };
 		9E7BF26018608B2800325186 /* ic_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about.png; sourceTree = "<group>"; };
@@ -911,6 +921,7 @@
 		9E1ECCA5184AD1AE003ECD5F /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				9E54B2081879CA2100F2787A /* Weibo */,
 				9E54B1FB1879643B00F2787A /* BBS */,
 				9E54B1EB18788DF600F2787A /* ElectronicJournals */,
 				9E54B1DB1877AEE500F2787A /* Prize */,
@@ -1388,6 +1399,20 @@
 			path = BBS;
 			sourceTree = "<group>";
 		};
+		9E54B2081879CA2100F2787A /* Weibo */ = {
+			isa = PBXGroup;
+			children = (
+				9E54B2091879CA5500F2787A /* SHWeiboListViewController.h */,
+				9E54B20A1879CA5500F2787A /* SHWeiboListViewController.m */,
+				9E54B20B1879CA5500F2787A /* SHWeiboListViewController.xib */,
+				9E54B20E1879CA8A00F2787A /* SHWeiboView.h */,
+				9E54B20F1879CA8A00F2787A /* SHWeiboView.m */,
+				9E54B2111879CA9C00F2787A /* SHWeiboView.xib */,
+			);
+			name = Weibo;
+			path = CleanChinaApp/Bussiness/Weibo;
+			sourceTree = SOURCE_ROOT;
+		};
 		9E7BF27D1860B30000325186 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -1532,6 +1557,7 @@
 				9E33DC9F1858CADA008C61AC /* ic_book.png in Resources */,
 				9E33DC9E1858CADA008C61AC /* ic_book_ac@2x.png in Resources */,
 				9E54B1EA1878828300F2787A /* SHPrizeCustomListViewController.xib in Resources */,
+				9E54B20D1879CA5500F2787A /* SHWeiboListViewController.xib in Resources */,
 				9E33DCAA1858CADA008C61AC /* ic_youku_ac@2x.png in Resources */,
 				9E33DBF118589E53008C61AC /* DSLCalendarMonthSelectorView.xib in Resources */,
 				9E33DC2718589E53008C61AC /* showview_left_shade.png in Resources */,
@@ -1558,6 +1584,7 @@
 				9E04DD5F1871D0CA000E8BC7 /* ic_ensure@2x.png in Resources */,
 				9E0FC5A818691A1A008D3585 /* ic_about2.png in Resources */,
 				9E33DBF818589E53008C61AC /* DSLCalendar-previousMonth@2x.png in Resources */,
+				9E54B2121879CA9C00F2787A /* SHWeiboView.xib in Resources */,
 				9E33DC0718589E53008C61AC /* blueArrow@2x.png in Resources */,
 				9E33DCA91858CADA008C61AC /* ic_youku_ac.png in Resources */,
 				9E33DBEE18589E53008C61AC /* DSLCalendarDayCalloutView.xib in Resources */,
@@ -1741,12 +1768,14 @@
 				9E241A11185A9D6E0029A807 /* SHMainShowViewController.m in Sources */,
 				9E33DBF018589E53008C61AC /* DSLCalendarMonthSelectorView.m in Sources */,
 				9E33DC1E18589E53008C61AC /* MMVectorImage.m in Sources */,
+				9E54B20C1879CA5500F2787A /* SHWeiboListViewController.m in Sources */,
 				9E33DC5418589E53008C61AC /* NVDebugPanelController.m in Sources */,
 				9E33DBE818589E53008C61AC /* UIButton+Addition.m in Sources */,
 				9E33DC1418589E53008C61AC /* PCLineChartView.m in Sources */,
 				9E33DC2C18589E53008C61AC /* SHTableViewController.m in Sources */,
 				9E04DD681871D83B000E8BC7 /* SHTempletImageViewController.m in Sources */,
 				9E33DC0D18589E53008C61AC /* NTChartView.m in Sources */,
+				9E54B2101879CA8A00F2787A /* SHWeiboView.m in Sources */,
 				9E04DD631871D58A000E8BC7 /* SHTempletImageContentViewContoller.m in Sources */,
 				9E54B1D31875C52300F2787A /* SHNewsViewController.m in Sources */,
 				9E33DC2F18589E53008C61AC /* SHNoneViewCell.m in Sources */,

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/MainFrame/SHMainViewController.m"
-            timestampString = "410554554.015267"
+            timestampString = "410636895.660971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "-animationDidStop"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/MainFrame/SHMainViewController.m"
-            timestampString = "410554554.015267"
+            timestampString = "410636895.660971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "-animationDidStop"
             landmarkType = "5">
          </BreakpointContent>
@@ -57,28 +57,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/About/SHAboutViewController.m"
-            timestampString = "410246516.882286"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
-            timestampString = "409688904.657415"
+            timestampString = "410633172.48813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-btnItemOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
-            timestampString = "409688904.657415"
+            timestampString = "410633172.48813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-btnItemOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
-            timestampString = "409772207.235891"
+            timestampString = "410633172.48813"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-btnItemOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/MainFrame/SHMainViewController.m"
-            timestampString = "410554554.015267"
+            timestampString = "410636895.660971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "-btnBussinessOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -794,11 +778,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/Bussiness/BBS/SHBBSListViewController.m"
-            timestampString = "410631589.227074"
+            timestampString = "410634257.998074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-btnTodayOnTouch:"
             landmarkType = "5">
          </BreakpointContent>
@@ -826,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CleanChinaApp/CleanChinaApp/Bussiness/BBS/SHBBSListViewController.m"
-            timestampString = "410631589.227074"
+            timestampString = "410634257.998074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "-loadSkin"
             landmarkType = "5">
          </BreakpointContent>
@@ -847,6 +831,148 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
+            landmarkName = "-taskDidFinished:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+            timestampString = "410633172.48813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-btnItemOnTouch:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SHMainShowNavigationViewController btnItemOnTouch:]"
+                  moduleName = "CleanChinaApp"
+                  urlString = "file:///Users/zywang/Documents/ios/Cleanchina/CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+                  timestampString = "410633029.91817"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SHMainShowNavigationViewController btnItemOnTouch:]"
+                  moduleName = "CleanChinaApp"
+                  urlString = "file:///Users/zywang/Documents/ios/Cleanchina/CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+                  timestampString = "410633029.919798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "658">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+            timestampString = "410633172.48813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-setIndex:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/About/SHAboutViewController.m"
+            timestampString = "410633430.394334"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+            timestampString = "410633840.517119"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-btnItemOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/MainShow/SHMainShowNavigationViewController.m"
+            timestampString = "410634132.173906"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-btnItemOnTouch:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/Weibo/SHWeiboListViewController.m"
+            timestampString = "410636848.55019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CleanChinaApp/CleanChinaApp/Bussiness/Weibo/SHWeiboListViewController.m"
+            timestampString = "410636848.55019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "-taskDidFinished:"
             landmarkType = "5">
          </BreakpointContent>

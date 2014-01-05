@@ -10,6 +10,7 @@
 #import "SHLoadingViewController.h"
 #import "SHMainShowViewController.h"
 #import "SHTempletImageViewController.h"
+#import "SHWeiboListViewController.h"
 
 @interface SHMainViewController : SHViewController <SHTaskDelegate>
 {
@@ -33,6 +34,8 @@
 - (IBAction)btnBussinessOnTouch:(id)sender;
 
 - (IBAction)btnShowOnTouch:(id)sender;
+
+- (IBAction)btnWeiboOnTouch:(id)sender;
 
 - (IBAction)btnBookOnTouch:(id)sender;
 @end
