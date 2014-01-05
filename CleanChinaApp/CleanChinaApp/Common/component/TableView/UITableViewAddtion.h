@@ -12,7 +12,7 @@
 
 - (SHTableViewGeneralCell *)dequeueReusableGeneralCell;
 
-- (SHTableViewGeneralCell*)dequeueReusableTitleContentCell;
+- (SHTableViewTitleContentCell*)dequeueReusableTitleContentCell;
 
 - (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell;
 

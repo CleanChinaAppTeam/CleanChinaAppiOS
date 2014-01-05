@@ -11,12 +11,12 @@
 @implementation UITableView(Addition)
 
 
-- (SHTableViewGeneralCell*)dequeueReusableTitleContentCell
+- (SHTableViewTitleContentCell*)dequeueReusableTitleContentCell
 {
     
-    SHTableViewGeneralCell * cell = [self dequeueReusableCellWithIdentifier:@"table_title_content_cell"];
+    SHTableViewTitleContentCell * cell = [self dequeueReusableCellWithIdentifier:@"table_title_content_cell"];
     if(cell == nil){
-        cell = (SHTableViewGeneralCell*)[[[NSBundle mainBundle]loadNibNamed:@"SHTableViewTitleContentCell" owner:nil options:nil] objectAtIndex:0];
+        cell = (SHTableViewTitleContentCell*)[[[NSBundle mainBundle]loadNibNamed:@"SHTableViewTitleContentCell" owner:nil options:nil] objectAtIndex:0];
     }
     return cell;
 }

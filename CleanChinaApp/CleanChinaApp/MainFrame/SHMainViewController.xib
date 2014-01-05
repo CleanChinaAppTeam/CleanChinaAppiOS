@@ -31,6 +31,9 @@
                     <inset key="titleEdgeInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
                     <state key="normal" image="ic_new.png"/>
                     <state key="highlighted" image="ic_new_ac.png"/>
+                    <connections>
+                        <action selector="btnNewsOnTouch:" destination="-1" eventType="touchUpInside" id="0EV-x1-6H8"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TQE-ym-vOb">
                     <rect key="frame" x="128" y="183" width="58" height="58"/>
@@ -61,6 +64,9 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="highlighted" image="ic_book_ac.png"/>
+                    <connections>
+                        <action selector="btnBookOnTouch:" destination="-1" eventType="touchUpInside" id="cXh-cD-rAz"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a6j-Us-gB1">
                     <rect key="frame" x="90" y="51" width="46" height="46"/>

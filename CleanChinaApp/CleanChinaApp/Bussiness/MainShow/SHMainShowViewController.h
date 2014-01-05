@@ -21,4 +21,5 @@
 - (IBAction)btnBack:(id)sender;
 - (IBAction)btnOnTouch:(id)sender;
 - (IBAction)btnRegisterOnTouch:(id)sender;
+- (IBAction)btnPrizeOnTouch:(id)sender;
 @end

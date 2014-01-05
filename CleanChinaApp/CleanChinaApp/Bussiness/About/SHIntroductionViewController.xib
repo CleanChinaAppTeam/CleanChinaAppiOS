@@ -9,7 +9,7 @@
                 <outlet property="mLabAddress" destination="fvO-Hi-ayg" id="gya-Oq-vT9"/>
                 <outlet property="mLabDate" destination="gtn-d2-8xD" id="Mgj-3O-aTr"/>
                 <outlet property="mLabName" destination="6cp-B4-704" id="9ql-1a-uUd"/>
-                <outlet property="mLabSummer" destination="8I5-SM-7UR" id="QIA-4a-GSw"/>
+                <outlet property="mLabSummer" destination="ubz-Hh-rFB" id="vtc-r5-pYG"/>
                 <outlet property="mLabWeb" destination="1FM-TC-uFu" id="Unu-gD-hRr"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -34,14 +34,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间:2014年4月15号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gtn-d2-8xD">
-                    <rect key="frame" x="18" y="127" width="157" height="21"/>
+                    <rect key="frame" x="18" y="126" width="282" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="1" green="0.54117647058823526" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地点:上海展览馆" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fvO-Hi-ayg">
-                    <rect key="frame" x="18" y="154" width="141" height="21"/>
+                    <rect key="frame" x="18" y="154" width="282" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="1" green="0.54117647059999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,15 +54,6 @@
                     <color key="textColor" red="1" green="0.54117647059999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8I5-SM-7UR">
-                    <rect key="frame" x="18" y="209" width="282" height="306"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="highlightedColor"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="labmidlight"/>
-                    </userDefinedRuntimeAttributes>
-                </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo_light.png" id="ioY-KT-RLp">
                     <rect key="frame" x="240" y="523" width="60" height="25"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -71,6 +62,16 @@
                     <rect key="frame" x="6" y="0.0" width="150" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="ubz-Hh-rFB">
+                    <rect key="frame" x="18" y="214" width="284" height="307"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="labmidlight"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

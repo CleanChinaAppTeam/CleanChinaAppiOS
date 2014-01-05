@@ -13,7 +13,7 @@
 {
     
     __weak IBOutlet UILabel *mLabName;
-    __weak IBOutlet UILabel *mLabSummer;
+    __weak IBOutlet UITextView *mLabSummer;
     __weak IBOutlet UILabel *mLabWeb;
     __weak IBOutlet UILabel *mLabAddress;
     __weak IBOutlet UILabel *mLabDate;

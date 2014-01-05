@@ -28,7 +28,9 @@
 {
     [super viewDidLoad];
     if(self.func.length > 0){
-        [self showWaitDialogForNetWork];
+        if(!self.hidwait){
+            [self showWaitDialogForNetWork];
+        }
         SHPostTaskM * post = [[SHPostTaskM alloc]init];
         post.URL = URL_FOR(self.func);
         post.delegate = self;

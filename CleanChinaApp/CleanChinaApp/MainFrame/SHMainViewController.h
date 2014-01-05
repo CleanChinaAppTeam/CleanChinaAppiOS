@@ -9,7 +9,9 @@
 #import "SHViewController.h"
 #import "SHLoadingViewController.h"
 #import "SHMainShowViewController.h"
-@interface SHMainViewController : SHViewController
+#import "SHTempletImageViewController.h"
+
+@interface SHMainViewController : SHViewController <SHTaskDelegate>
 {
     __weak IBOutlet UIButton *mBtnYouk;
     __weak IBOutlet UIButton *mBtnBook;
@@ -19,14 +21,18 @@
     __weak IBOutlet UIView *mView;
     SHLoadingViewController * mLoadingViewController;
     SHMainShowViewController * mMainShowViewController;
+    SHTempletImageViewController * mAdViewController;
     __weak IBOutlet UILabel *mLab5;
     __weak IBOutlet UILabel *mLab4;
     __weak IBOutlet UILabel *mLab3;
     __weak IBOutlet UILabel *mLab2;
     __weak IBOutlet UILabel *mLab1;
 }
+- (IBAction)btnNewsOnTouch:(id)sender;
 
 - (IBAction)btnBussinessOnTouch:(id)sender;
 
 - (IBAction)btnShowOnTouch:(id)sender;
+
+- (IBAction)btnBookOnTouch:(id)sender;
 @end

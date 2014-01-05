@@ -46,8 +46,8 @@
     }
     mLabPhone.text = [NSString stringWithFormat:@"电话:%@", [task.result valueForKey: @"tele"]];
     mLabName.text = [task.result valueForKey:@"companyname"];
-    //mTxtSummer.text = [task.result valueForKey:@"summary"];
-    
+    mTxtSummer.text = [task.result valueForKey:@"summary"];
+    mTxtSummer.userstyle= @"labmidlight";
 }
 
 - (void)taskDidFailed:(SHTask *)task

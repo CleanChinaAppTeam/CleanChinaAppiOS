@@ -48,10 +48,16 @@
     mLabName.text = [task.result valueForKey:@"name"];
     mLabDate.text = [NSString stringWithFormat:@"日期:%@",[task.result valueForKey:@"date"]];
     mLabSummer.text = [task.result valueForKey:@"summary"];
+    mLabSummer.userstyle = @"labmidlight";
     mLabWeb.text = [NSString stringWithFormat:@"网址:%@",[task.result valueForKey:@"website"]];
-    [mLabSummer sizeToFit];
+    //[mLabSummer sizeToFit];
 }
 
+-(void)loadSkin
+{
+    [super loadSkin];
+    mLabSummer.userstyle = @"labmidlight";
+}
  -(void)taskDidFailed:(SHTask *)task
 {
     [self dismissWaitDialog];

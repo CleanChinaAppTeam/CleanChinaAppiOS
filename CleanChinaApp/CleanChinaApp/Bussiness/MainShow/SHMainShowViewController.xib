@@ -101,6 +101,9 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <state key="highlighted" image="ic_show_gold_ac.png"/>
+                            <connections>
+                                <action selector="btnPrizeOnTouch:" destination="-1" eventType="touchUpInside" id="MFc-X0-ouM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1n2-s7-J8S">
                             <rect key="frame" x="49" y="422" width="62" height="62"/>

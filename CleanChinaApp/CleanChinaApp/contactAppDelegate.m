@@ -18,13 +18,14 @@
     mMainViewController = [[SHMainViewController alloc]init];
    
 //    UINavigationController* mNavigationViewController = [[UINavigationController alloc]initWithRootViewController:mMainViewController];
-  UINavigationController* mNavigationViewController = [[UINavigationController alloc]init];
+    UINavigationController* mNavigationViewController = [[UINavigationController alloc]init];
     [mNavigationViewController pushViewController:mMainViewController animated:NO];
     mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
-
+    
     mNavigationViewController.navigationBar.translucent = NO;
+    [mNavigationViewController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 //    [mNavigationViewController.navigationBar setHidden:YES];
 //    [self.view addSubview:mNavigationViewController.view];
 

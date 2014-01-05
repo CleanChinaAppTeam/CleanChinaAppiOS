@@ -8,6 +8,8 @@
 
 #import "SHMainViewController.h"
 #import "SHMainShowViewController.h"
+#import "SHNewsViewController.h"
+#import "SHElectronicJournalsListViewController.h"
 
 @interface SHMainViewController ()
 
@@ -28,19 +30,60 @@
 {
     [super viewDidLoad];
     mLoadingViewController =  [[SHLoadingViewController alloc]init ];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(@"advertise");
+    post.delegate = self;
+    [post start];
     //[self addChildViewController:mLoadingViewController];
     [self.view addSubview:mLoadingViewController.view];
-    [self animation];
+    [self performSelector:@selector(loadAdvertise) withObject:Nil afterDelay:3.1];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)loadAdvertise
+{
+    if(mAdViewController){
+        [UIView beginAnimations:nil context:Nil];
+        [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:self.view cache:YES];
+        [self.view addSubview:mAdViewController.view];
+        [UIView commitAnimations];
+        [self performSelector:@selector(animation) withObject:Nil afterDelay:3];
+    }else{
+        [self animation];
+    }
+}
+
+
+- (void)taskDidFailed:(SHTask *)task
+{
+}
+
+- (void)taskDidFinished:(SHTask *)task
+{
+    mAdViewController = [[SHTempletImageViewController alloc]init];
+    mAdViewController.func = @"advertise";
+    mAdViewController.hidwait = YES;
+    mAdViewController.view;
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
-        [self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
+
 - (void)animation
 {
+    [UIView beginAnimations:nil context:Nil];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:1.0];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+    [mAdViewController.view removeFromSuperview];
+    [UIView commitAnimations];
+
     [UIView beginAnimations:Nil context:Nil];
-    [UIView setAnimationDelay:3.1];
+    [UIView setAnimationDelay:1];
     [UIView setAnimationDuration:2];
     mBtnNews.frame = CGRectMake(4, 273, 46, 46  );
     mBtnBuss.frame = CGRectMake(50, 319, 58, 58  );
@@ -76,6 +119,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnNewsOnTouch:(id)sender
+{
+    SHNewsViewController * controller = [[SHNewsViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
 - (IBAction)btnBussinessOnTouch:(id)sender
 {
     SHWebViewController * controller = [[SHWebViewController alloc]init];
@@ -86,25 +135,7 @@
 
 - (IBAction)btnShowOnTouch:(id)sender
 {
-    //UINavigationController * controller  = [[UINavigationController alloc]init];
-//    if(mNavigationViewController == nil){
-//     mNavigationViewController = [[UINavigationController alloc]init];
-//        mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-//        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-//        mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
-//        
-////        mNavigationViewController.navigationBar.backItem.backBarButtonItem.title = @"";
-////        mNavigationViewController.navigationBar.backItem.backBarButtonItem.tintColor = [UIColor whiteColor];
-////        mNavigationViewController.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
-////        mNavigationViewController.navigationItem.backBarButtonItem.title = @"";
-//
-//        mNavigationViewController.navigationBar.translucent = NO;
-//        [self.view addSubview:mNavigationViewController.view];
-//        
-//        mMainShowViewController = [[SHMainShowViewController alloc]init];
-//        [mNavigationViewController pushViewController:mMainShowViewController animated:NO];
-//    }
-//    
+
 
     mMainShowViewController = [[SHMainShowViewController alloc]init];
     [self addChildViewController:mMainShowViewController];
@@ -117,6 +148,12 @@
     [UIView setAnimationDuration:0.5];
     mMainShowViewController.view.frame = frame;
     [UIView commitAnimations];
+}
+
+- (IBAction)btnBookOnTouch:(id)sender
+{
+    SHElectronicJournalsListViewController * controller = [[SHElectronicJournalsListViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

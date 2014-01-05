@@ -11,4 +11,5 @@
 @interface SHTempletImageViewController : SHViewController <SHTaskDelegate>
 @property (weak, nonatomic) IBOutlet SHImageView *imgView;
 @property (copy,nonatomic) NSString * func;
+@property (nonatomic,assign) BOOL hidwait;
 @end

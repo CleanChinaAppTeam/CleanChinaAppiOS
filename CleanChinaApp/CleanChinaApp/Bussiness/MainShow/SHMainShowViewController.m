@@ -9,6 +9,8 @@
 #import "SHMainShowViewController.h"
 #import "SHAboutViewController.h"
 #import "SHGoupengViewController.h"
+#import "SHPrizeViewController.h"
+
 @interface SHMainShowViewController ()
 
 @end
@@ -45,7 +47,7 @@
 {
     [super loadSkin];
     mView.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorBackGround"];
-      [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,6 +80,12 @@
 - (IBAction)btnRegisterOnTouch:(id)sender
 {
     SHRegisterViewController * controller = [[SHRegisterViewController alloc]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)btnPrizeOnTouch:(id)sender
+{
+    SHPrizeViewController * controller = [[SHPrizeViewController alloc]init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
