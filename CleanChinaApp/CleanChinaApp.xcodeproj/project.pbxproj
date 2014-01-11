@@ -231,6 +231,10 @@
 		9E54B20D1879CA5500F2787A /* SHWeiboListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B20B1879CA5500F2787A /* SHWeiboListViewController.xib */; };
 		9E54B2101879CA8A00F2787A /* SHWeiboView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B20F1879CA8A00F2787A /* SHWeiboView.m */; };
 		9E54B2121879CA9C00F2787A /* SHWeiboView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B2111879CA9C00F2787A /* SHWeiboView.xib */; };
+		9E54B2171880FE7700F2787A /* SHExhibitionFloorPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E54B2151880FE7700F2787A /* SHExhibitionFloorPlanViewController.m */; };
+		9E54B2181880FE7700F2787A /* SHExhibitionFloorPlanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B2161880FE7700F2787A /* SHExhibitionFloorPlanViewController.xib */; };
+		9E54B21B18814B1600F2787A /* ic_floor1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B21918814B1600F2787A /* ic_floor1.png */; };
+		9E54B21C18814B1600F2787A /* ic_floor2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E54B21A18814B1600F2787A /* ic_floor2.png */; };
 		9E7BF25E18608A6D00325186 /* ic_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25D18608A6D00325186 /* ic_up.png */; };
 		9E7BF26118608B2800325186 /* ic_about_ac.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF25F18608B2800325186 /* ic_about_ac.png */; };
 		9E7BF26218608B2800325186 /* ic_about.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF26018608B2800325186 /* ic_about.png */; };
@@ -615,6 +619,11 @@
 		9E54B20E1879CA8A00F2787A /* SHWeiboView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHWeiboView.h; sourceTree = "<group>"; };
 		9E54B20F1879CA8A00F2787A /* SHWeiboView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHWeiboView.m; sourceTree = "<group>"; };
 		9E54B2111879CA9C00F2787A /* SHWeiboView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHWeiboView.xib; sourceTree = "<group>"; };
+		9E54B2141880FE7700F2787A /* SHExhibitionFloorPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHExhibitionFloorPlanViewController.h; sourceTree = "<group>"; };
+		9E54B2151880FE7700F2787A /* SHExhibitionFloorPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHExhibitionFloorPlanViewController.m; sourceTree = "<group>"; };
+		9E54B2161880FE7700F2787A /* SHExhibitionFloorPlanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHExhibitionFloorPlanViewController.xib; sourceTree = "<group>"; };
+		9E54B21918814B1600F2787A /* ic_floor1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_floor1.png; sourceTree = "<group>"; };
+		9E54B21A18814B1600F2787A /* ic_floor2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_floor2.png; sourceTree = "<group>"; };
 		9E7BF25D18608A6D00325186 /* ic_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_up.png; sourceTree = "<group>"; };
 		9E7BF25F18608B2800325186 /* ic_about_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about_ac.png; sourceTree = "<group>"; };
 		9E7BF26018608B2800325186 /* ic_about.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_about.png; sourceTree = "<group>"; };
@@ -849,6 +858,8 @@
 		9E1ECC98184AD198003ECD5F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
+				9E54B21918814B1600F2787A /* ic_floor1.png */,
+				9E54B21A18814B1600F2787A /* ic_floor2.png */,
 				9E04DD5C1871D0CA000E8BC7 /* ic_ensure_ac@2x.png */,
 				9E04DD5D1871D0CA000E8BC7 /* ic_ensure@2x.png */,
 				9E04DD581871CF9F000E8BC7 /* ic_ensure_ac.png */,
@@ -921,6 +932,7 @@
 		9E1ECCA5184AD1AE003ECD5F /* Bussiness */ = {
 			isa = PBXGroup;
 			children = (
+				9E54B2131880FE5A00F2787A /* ExhibitionFloorPlan */,
 				9E54B2081879CA2100F2787A /* Weibo */,
 				9E54B1FB1879643B00F2787A /* BBS */,
 				9E54B1EB18788DF600F2787A /* ElectronicJournals */,
@@ -1413,6 +1425,16 @@
 			path = CleanChinaApp/Bussiness/Weibo;
 			sourceTree = SOURCE_ROOT;
 		};
+		9E54B2131880FE5A00F2787A /* ExhibitionFloorPlan */ = {
+			isa = PBXGroup;
+			children = (
+				9E54B2141880FE7700F2787A /* SHExhibitionFloorPlanViewController.h */,
+				9E54B2151880FE7700F2787A /* SHExhibitionFloorPlanViewController.m */,
+				9E54B2161880FE7700F2787A /* SHExhibitionFloorPlanViewController.xib */,
+			);
+			path = ExhibitionFloorPlan;
+			sourceTree = "<group>";
+		};
 		9E7BF27D1860B30000325186 /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -1599,6 +1621,7 @@
 				9E1ECCA1184AD198003ECD5F /* img_min_bubble.png in Resources */,
 				9E33DBFF18589E53008C61AC /* DSLCalendarDaySelection-right.png in Resources */,
 				9E33DC891858C911008C61AC /* ic_new_ac.png in Resources */,
+				9E54B21C18814B1600F2787A /* ic_floor2.png in Resources */,
 				9E0FC5A718691A1A008D3585 /* ic_about_ac2.png in Resources */,
 				9E1ECCA0184AD198003ECD5F /* img_max_bubble.png in Resources */,
 				9E33DCA61858CADA008C61AC /* ic_show_ac@2x.png in Resources */,
@@ -1648,11 +1671,13 @@
 				9E33DBF718589E53008C61AC /* DSLCalendar-previousMonth.png in Resources */,
 				9E33DC3218589E53008C61AC /* SHTableViewEditGeneralCell.xib in Resources */,
 				9E7BF2791860A63200325186 /* ic_show_goupen_ac.png in Resources */,
+				9E54B21B18814B1600F2787A /* ic_floor1.png in Resources */,
 				9E04DD3A1871AF09000E8BC7 /* SHCustomerDetailViewController.xib in Resources */,
 				9E7BF2751860A5E900325186 /* ic_show_login_ac.png in Resources */,
 				9E33DC0518589E53008C61AC /* blackArrow@2x.png in Resources */,
 				9E7BF2691860A47100325186 /* ic_show_search_ac.png in Resources */,
 				9E1ECCA3184AD198003ECD5F /* img_wave.png in Resources */,
+				9E54B2181880FE7700F2787A /* SHExhibitionFloorPlanViewController.xib in Resources */,
 				9E54B1DA1875CE4800F2787A /* SHImageContentViewController.xib in Resources */,
 				9E54B2051879B86A00F2787A /* SHBBSDetailViewController.xib in Resources */,
 				9E0FC5AD18691A1A008D3585 /* ic_goupeng_ac.png in Resources */,
@@ -1776,6 +1801,7 @@
 				9E04DD681871D83B000E8BC7 /* SHTempletImageViewController.m in Sources */,
 				9E33DC0D18589E53008C61AC /* NTChartView.m in Sources */,
 				9E54B2101879CA8A00F2787A /* SHWeiboView.m in Sources */,
+				9E54B2171880FE7700F2787A /* SHExhibitionFloorPlanViewController.m in Sources */,
 				9E04DD631871D58A000E8BC7 /* SHTempletImageContentViewContoller.m in Sources */,
 				9E54B1D31875C52300F2787A /* SHNewsViewController.m in Sources */,
 				9E33DC2F18589E53008C61AC /* SHNoneViewCell.m in Sources */,

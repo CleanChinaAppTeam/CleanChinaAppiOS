@@ -72,8 +72,6 @@
 - (IBAction)btnOnTouch:(UIButton*)sender
 {
     SHMainShowNavigationViewController * controller = [[SHMainShowNavigationViewController alloc]init];
-    
-//    controller.view;
     controller.index = sender.tag;
     [self.navigationController pushViewController:controller animated:YES];
     //NSLog (self.navigationController.navigationBar.backItem);

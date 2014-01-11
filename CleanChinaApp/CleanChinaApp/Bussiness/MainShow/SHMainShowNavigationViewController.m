@@ -86,10 +86,10 @@
         controller = mgoupengviewcontroller;
     }
     else if (sender.tag == 2){
-        if(mgoupengviewcontroller == nil){
-            mgoupengviewcontroller = [[SHGoupengViewController alloc]init];
+        if(mexhibitionviewcontroller == nil){
+            mexhibitionviewcontroller = [[SHExhibitionFloorPlanViewController alloc]init];
         }
-        controller = mgoupengviewcontroller;
+        controller = mexhibitionviewcontroller;
     }
     else if (sender.tag == 3){
         if(prizeviewcontroller == nil){
@@ -105,6 +105,7 @@
     [self.view addSubview:controller.view];
     controller.view.backgroundColor = self.view.backgroundColor;
     self.title = controller.title;
+    self.navigationItem.rightBarButtonItems = controller.navigationItem.rightBarButtonItems;
     CGRect frame = self.view.bounds;
     frame.size.height -= 50;
     controller.view.frame = frame;

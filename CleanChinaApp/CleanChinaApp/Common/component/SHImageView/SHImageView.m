@@ -63,20 +63,19 @@
         NSData * data = [Base64 decode:base64];
         self.mark = [result valueForKey:@"description"];
         self.image = [[UIImage alloc]initWithData:data];
-        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
-            [self.delegate imageViewDidLoadFinished];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished:)]) {
+            [self.delegate imageViewDidLoadFinished:self];
         }
     }else if ([task.result isKindOfClass:[NSDate class]] || [task.result isKindOfClass:[NSMutableData class]]){
         self.image = [[UIImage alloc]initWithData:task.result];
-        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
-            [self.delegate imageViewDidLoadFinished];
+        if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished:)]) {
+            [self.delegate imageViewDidLoadFinished:self];
         }
-    }else
-    {
+    }else{
         @try{
             self.image = [[UIImage alloc]initWithData:task.result];
-            if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished)]) {
-                [self.delegate imageViewDidLoadFinished];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished:)]) {
+                [self.delegate imageViewDidLoadFinished:self];
             }
         }
         @catch (NSException * e) {

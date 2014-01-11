@@ -13,7 +13,7 @@
 
 @protocol SHImageViewDelegate<NSObject>
 
-- (void) imageViewDidLoadFinished;
+- (void) imageViewDidLoadFinished:(SHImageView*) imageview;
 
 @end
 
