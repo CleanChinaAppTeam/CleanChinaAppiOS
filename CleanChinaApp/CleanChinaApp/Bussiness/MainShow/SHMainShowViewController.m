@@ -37,6 +37,7 @@
     //[self.view addSubview:mController.view];
     //[self.view addSubview:mController.view];
 	// Do any additional setup after loading the view.
+    mScroll.contentSize = CGSizeMake(320, 568);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -60,6 +61,7 @@
 - (IBAction)btnGoupengOnTouch:(id)sender
 {
     SHMainShowNavigationViewController * controller = [[SHMainShowNavigationViewController alloc]init];
+    controller.showBackItem = YES;
      [self.navigationController pushViewController:controller animated:YES];
 }
 
@@ -72,6 +74,7 @@
 - (IBAction)btnOnTouch:(UIButton*)sender
 {
     SHMainShowNavigationViewController * controller = [[SHMainShowNavigationViewController alloc]init];
+     controller.showBackItem = YES;
     controller.index = sender.tag;
     [self.navigationController pushViewController:controller animated:YES];
     //NSLog (self.navigationController.navigationBar.backItem);

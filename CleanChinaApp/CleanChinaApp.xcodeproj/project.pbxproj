@@ -181,7 +181,6 @@
 		9E33DC5418589E53008C61AC /* NVDebugPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E33DBE218589E53008C61AC /* NVDebugPanelController.m */; };
 		9E33DC5518589E53008C61AC /* NVDebugPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E33DBE318589E53008C61AC /* NVDebugPanelController.xib */; };
 		9E33DC5718589E53008C61AC /* UIViewAddtion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E33DBE718589E53008C61AC /* UIViewAddtion.m */; };
-		9E33DC781858BC18008C61AC /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E33DC771858BC18008C61AC /* libCore.a */; };
 		9E33DC7A1858BC49008C61AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E33DC791858BC49008C61AC /* Security.framework */; };
 		9E33DC7C1858BC57008C61AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E33DC7B1858BC57008C61AC /* SystemConfiguration.framework */; };
 		9E33DC7E1858BCF6008C61AC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E33DC7D1858BCF6008C61AC /* CoreTelephony.framework */; };
@@ -260,6 +259,7 @@
 		9E7BF2D11862812F00325186 /* SHGoupengViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF2CF1862812F00325186 /* SHGoupengViewController.xib */; };
 		9EA397F51858CC08006E0A6E /* ic_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA397F31858CC08006E0A6E /* ic_weibo.png */; };
 		9EA397F61858CC08006E0A6E /* ic_wetion.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA397F41858CC08006E0A6E /* ic_wetion.png */; };
+		9EE3E69A18844A3B003F4FA1 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E69918844A3B003F4FA1 /* libCore.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,33 +276,6 @@
 		9E04DD361871AF09000E8BC7 /* SHCustomerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCustomerDetailViewController.h; sourceTree = "<group>"; };
 		9E04DD371871AF09000E8BC7 /* SHCustomerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCustomerDetailViewController.m; sourceTree = "<group>"; };
 		9E04DD381871AF09000E8BC7 /* SHCustomerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHCustomerDetailViewController.xib; sourceTree = "<group>"; };
-		9E04DD3D1871B2FD000E8BC7 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
-		9E04DD3E1871B2FD000E8BC7 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		9E04DD3F1871B2FD000E8BC7 /* Entironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entironment.h; sourceTree = "<group>"; };
-		9E04DD401871B2FD000E8BC7 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
-		9E04DD411871B2FD000E8BC7 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
-		9E04DD421871B2FD000E8BC7 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
-		9E04DD431871B2FD000E8BC7 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		9E04DD441871B2FD000E8BC7 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
-		9E04DD451871B2FD000E8BC7 /* Respinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Respinfo.h; sourceTree = "<group>"; };
-		9E04DD461871B2FD000E8BC7 /* SHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCacheManager.h; sourceTree = "<group>"; };
-		9E04DD471871B2FD000E8BC7 /* SHConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConfigManager.h; sourceTree = "<group>"; };
-		9E04DD481871B2FD000E8BC7 /* SHCrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCrashManager.h; sourceTree = "<group>"; };
-		9E04DD491871B2FD000E8BC7 /* SHFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFlowManager.h; sourceTree = "<group>"; };
-		9E04DD4A1871B2FD000E8BC7 /* SHFuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFuck.h; sourceTree = "<group>"; };
-		9E04DD4B1871B2FD000E8BC7 /* SHHttpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTask.h; sourceTree = "<group>"; };
-		9E04DD4C1871B2FD000E8BC7 /* SHHttpTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTaskM.h; sourceTree = "<group>"; };
-		9E04DD4D1871B2FD000E8BC7 /* SHIIOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIIOSVersion.h; sourceTree = "<group>"; };
-		9E04DD4E1871B2FD000E8BC7 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
-		9E04DD4F1871B2FD000E8BC7 /* SHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHObject.h; sourceTree = "<group>"; };
-		9E04DD501871B2FD000E8BC7 /* SHPostTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTask.h; sourceTree = "<group>"; };
-		9E04DD511871B2FD000E8BC7 /* SHPostTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTaskM.h; sourceTree = "<group>"; };
-		9E04DD521871B2FD000E8BC7 /* SHPrivateAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPrivateAPI.h; sourceTree = "<group>"; };
-		9E04DD531871B2FD000E8BC7 /* SHTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTask.h; sourceTree = "<group>"; };
-		9E04DD541871B2FD000E8BC7 /* SHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTools.h; sourceTree = "<group>"; };
-		9E04DD551871B2FD000E8BC7 /* SHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUser.h; sourceTree = "<group>"; };
-		9E04DD561871B2FD000E8BC7 /* SHVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVersion.h; sourceTree = "<group>"; };
-		9E04DD571871B2FD000E8BC7 /* wax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax.h; sourceTree = "<group>"; };
 		9E04DD581871CF9F000E8BC7 /* ic_ensure_ac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ensure_ac.png; sourceTree = "<group>"; };
 		9E04DD591871CF9F000E8BC7 /* ic_ensure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_ensure.png; sourceTree = "<group>"; };
 		9E04DD5C1871D0CA000E8BC7 /* ic_ensure_ac@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_ensure_ac@2x.png"; sourceTree = "<group>"; };
@@ -557,7 +530,6 @@
 		9E33DBE518589E53008C61AC /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
 		9E33DBE618589E53008C61AC /* UIViewAddtion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewAddtion.h; sourceTree = "<group>"; };
 		9E33DBE718589E53008C61AC /* UIViewAddtion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewAddtion.m; sourceTree = "<group>"; };
-		9E33DC771858BC18008C61AC /* libCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCore.a; path = "../../../Build/Products/Debug-iphonesimulator/libCore.a"; sourceTree = "<group>"; };
 		9E33DC791858BC49008C61AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		9E33DC7B1858BC57008C61AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E33DC7D1858BCF6008C61AC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -652,6 +624,34 @@
 		9E7BF2CF1862812F00325186 /* SHGoupengViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGoupengViewController.xib; sourceTree = "<group>"; };
 		9EA397F31858CC08006E0A6E /* ic_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_weibo.png; sourceTree = "<group>"; };
 		9EA397F41858CC08006E0A6E /* ic_wetion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wetion.png; sourceTree = "<group>"; };
+		9EE3E67E18844A3B003F4FA1 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		9EE3E67F18844A3B003F4FA1 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		9EE3E68018844A3B003F4FA1 /* Entironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entironment.h; sourceTree = "<group>"; };
+		9EE3E68118844A3B003F4FA1 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		9EE3E68218844A3B003F4FA1 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		9EE3E68318844A3B003F4FA1 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		9EE3E68418844A3B003F4FA1 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		9EE3E68518844A3B003F4FA1 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
+		9EE3E68618844A3B003F4FA1 /* Respinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Respinfo.h; sourceTree = "<group>"; };
+		9EE3E68718844A3B003F4FA1 /* SHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCacheManager.h; sourceTree = "<group>"; };
+		9EE3E68818844A3B003F4FA1 /* SHConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConfigManager.h; sourceTree = "<group>"; };
+		9EE3E68918844A3B003F4FA1 /* SHCrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCrashManager.h; sourceTree = "<group>"; };
+		9EE3E68A18844A3B003F4FA1 /* SHFlowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFlowManager.h; sourceTree = "<group>"; };
+		9EE3E68B18844A3B003F4FA1 /* SHFuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFuck.h; sourceTree = "<group>"; };
+		9EE3E68C18844A3B003F4FA1 /* SHHttpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTask.h; sourceTree = "<group>"; };
+		9EE3E68D18844A3B003F4FA1 /* SHHttpTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTaskM.h; sourceTree = "<group>"; };
+		9EE3E68E18844A3B003F4FA1 /* SHIIOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIIOSVersion.h; sourceTree = "<group>"; };
+		9EE3E68F18844A3B003F4FA1 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
+		9EE3E69018844A3B003F4FA1 /* SHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHObject.h; sourceTree = "<group>"; };
+		9EE3E69118844A3B003F4FA1 /* SHPostTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTask.h; sourceTree = "<group>"; };
+		9EE3E69218844A3B003F4FA1 /* SHPostTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTaskM.h; sourceTree = "<group>"; };
+		9EE3E69318844A3B003F4FA1 /* SHPrivateAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPrivateAPI.h; sourceTree = "<group>"; };
+		9EE3E69418844A3B003F4FA1 /* SHTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTask.h; sourceTree = "<group>"; };
+		9EE3E69518844A3B003F4FA1 /* SHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTools.h; sourceTree = "<group>"; };
+		9EE3E69618844A3B003F4FA1 /* SHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUser.h; sourceTree = "<group>"; };
+		9EE3E69718844A3B003F4FA1 /* SHVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVersion.h; sourceTree = "<group>"; };
+		9EE3E69818844A3B003F4FA1 /* wax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wax.h; sourceTree = "<group>"; };
+		9EE3E69918844A3B003F4FA1 /* libCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCore.a; path = "../../../../../Shared/Build/Products/Debug-iphoneos/libCore.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -661,10 +661,10 @@
 			files = (
 				9E33DC7E1858BCF6008C61AC /* CoreTelephony.framework in Frameworks */,
 				9E33DC7C1858BC57008C61AC /* SystemConfiguration.framework in Frameworks */,
+				9EE3E69A18844A3B003F4FA1 /* libCore.a in Frameworks */,
 				9E33DC7A1858BC49008C61AC /* Security.framework in Frameworks */,
 				9E1ECC92184ACAC0003ECD5F /* libxml2.dylib in Frameworks */,
 				9E1ECC90184ACA6D003ECD5F /* libsqlite3.dylib in Frameworks */,
-				9E33DC781858BC18008C61AC /* libCore.a in Frameworks */,
 				9E1D24EE1846576D00ACEE9E /* CoreGraphics.framework in Frameworks */,
 				9E1D24F01846576D00ACEE9E /* UIKit.framework in Frameworks */,
 				9E1D24EC1846576D00ACEE9E /* Foundation.framework in Frameworks */,
@@ -684,49 +684,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9E04DD3B1871B2FD000E8BC7 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				9E04DD3C1871B2FD000E8BC7 /* Core */,
-			);
-			name = include;
-			path = "../../../../../Shared/Build/Products/Debug-iphonesimulator/include";
-			sourceTree = "<group>";
-		};
-		9E04DD3C1871B2FD000E8BC7 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				9E04DD3D1871B2FD000E8BC7 /* Base64.h */,
-				9E04DD3E1871B2FD000E8BC7 /* Core.h */,
-				9E04DD3F1871B2FD000E8BC7 /* Entironment.h */,
-				9E04DD401871B2FD000E8BC7 /* FileManager.h */,
-				9E04DD411871B2FD000E8BC7 /* IPAddress.h */,
-				9E04DD421871B2FD000E8BC7 /* NSData+AES.h */,
-				9E04DD431871B2FD000E8BC7 /* NSString+MD5.h */,
-				9E04DD441871B2FD000E8BC7 /* NVSkin.h */,
-				9E04DD451871B2FD000E8BC7 /* Respinfo.h */,
-				9E04DD461871B2FD000E8BC7 /* SHCacheManager.h */,
-				9E04DD471871B2FD000E8BC7 /* SHConfigManager.h */,
-				9E04DD481871B2FD000E8BC7 /* SHCrashManager.h */,
-				9E04DD491871B2FD000E8BC7 /* SHFlowManager.h */,
-				9E04DD4A1871B2FD000E8BC7 /* SHFuck.h */,
-				9E04DD4B1871B2FD000E8BC7 /* SHHttpTask.h */,
-				9E04DD4C1871B2FD000E8BC7 /* SHHttpTaskM.h */,
-				9E04DD4D1871B2FD000E8BC7 /* SHIIOSVersion.h */,
-				9E04DD4E1871B2FD000E8BC7 /* SHLogger.h */,
-				9E04DD4F1871B2FD000E8BC7 /* SHObject.h */,
-				9E04DD501871B2FD000E8BC7 /* SHPostTask.h */,
-				9E04DD511871B2FD000E8BC7 /* SHPostTaskM.h */,
-				9E04DD521871B2FD000E8BC7 /* SHPrivateAPI.h */,
-				9E04DD531871B2FD000E8BC7 /* SHTask.h */,
-				9E04DD541871B2FD000E8BC7 /* SHTools.h */,
-				9E04DD551871B2FD000E8BC7 /* SHUser.h */,
-				9E04DD561871B2FD000E8BC7 /* SHVersion.h */,
-				9E04DD571871B2FD000E8BC7 /* wax.h */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		9E04DDAD1873DE8C000E8BC7 /* Webview */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,11 +739,11 @@
 		9E1D24EA1846576D00ACEE9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9EE3E67C18844A3B003F4FA1 /* include */,
+				9EE3E69918844A3B003F4FA1 /* libCore.a */,
 				9E33DC7D1858BCF6008C61AC /* CoreTelephony.framework */,
 				9E33DC7B1858BC57008C61AC /* SystemConfiguration.framework */,
 				9E33DC791858BC49008C61AC /* Security.framework */,
-				9E04DD3B1871B2FD000E8BC7 /* include */,
-				9E33DC771858BC18008C61AC /* libCore.a */,
 				9E1ECC91184ACAC0003ECD5F /* libxml2.dylib */,
 				9E1ECC8F184ACA6D003ECD5F /* libsqlite3.dylib */,
 				9E1D24EB1846576D00ACEE9E /* Foundation.framework */,
@@ -1480,6 +1437,49 @@
 			path = MainFrame;
 			sourceTree = "<group>";
 		};
+		9EE3E67C18844A3B003F4FA1 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3E67D18844A3B003F4FA1 /* Core */,
+			);
+			name = include;
+			path = "../../../../../Shared/Build/Products/Debug-iphoneos/include";
+			sourceTree = "<group>";
+		};
+		9EE3E67D18844A3B003F4FA1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3E67E18844A3B003F4FA1 /* Base64.h */,
+				9EE3E67F18844A3B003F4FA1 /* Core.h */,
+				9EE3E68018844A3B003F4FA1 /* Entironment.h */,
+				9EE3E68118844A3B003F4FA1 /* FileManager.h */,
+				9EE3E68218844A3B003F4FA1 /* IPAddress.h */,
+				9EE3E68318844A3B003F4FA1 /* NSData+AES.h */,
+				9EE3E68418844A3B003F4FA1 /* NSString+MD5.h */,
+				9EE3E68518844A3B003F4FA1 /* NVSkin.h */,
+				9EE3E68618844A3B003F4FA1 /* Respinfo.h */,
+				9EE3E68718844A3B003F4FA1 /* SHCacheManager.h */,
+				9EE3E68818844A3B003F4FA1 /* SHConfigManager.h */,
+				9EE3E68918844A3B003F4FA1 /* SHCrashManager.h */,
+				9EE3E68A18844A3B003F4FA1 /* SHFlowManager.h */,
+				9EE3E68B18844A3B003F4FA1 /* SHFuck.h */,
+				9EE3E68C18844A3B003F4FA1 /* SHHttpTask.h */,
+				9EE3E68D18844A3B003F4FA1 /* SHHttpTaskM.h */,
+				9EE3E68E18844A3B003F4FA1 /* SHIIOSVersion.h */,
+				9EE3E68F18844A3B003F4FA1 /* SHLogger.h */,
+				9EE3E69018844A3B003F4FA1 /* SHObject.h */,
+				9EE3E69118844A3B003F4FA1 /* SHPostTask.h */,
+				9EE3E69218844A3B003F4FA1 /* SHPostTaskM.h */,
+				9EE3E69318844A3B003F4FA1 /* SHPrivateAPI.h */,
+				9EE3E69418844A3B003F4FA1 /* SHTask.h */,
+				9EE3E69518844A3B003F4FA1 /* SHTools.h */,
+				9EE3E69618844A3B003F4FA1 /* SHUser.h */,
+				9EE3E69718844A3B003F4FA1 /* SHVersion.h */,
+				9EE3E69818844A3B003F4FA1 /* wax.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1933,7 +1933,7 @@
 		9E1D251B1846576D00ACEE9E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1941,16 +1941,20 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanChinaApp/CleanChinaApp-Prefix.pch";
 				INFOPLIST_FILE = "CleanChinaApp/CleanChinaApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/zywang/Documents/ios/Cleanchina/CleanChinaApp,
 					"/Users/zywang/Documents/Build/Products/Debug-iphonesimulator",
 					"/Users/zywang/Documents/Build/Products/Debug-iphoneos",
+					"/Users/Shared/Build/Products/Debug-iphonesimulator",
+					"/Users/Shared/Build/Products/Debug-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1958,7 +1962,7 @@
 		9E1D251C1846576D00ACEE9E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1966,16 +1970,20 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CleanChinaApp/CleanChinaApp-Prefix.pch";
 				INFOPLIST_FILE = "CleanChinaApp/CleanChinaApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/zywang/Documents/ios/Cleanchina/CleanChinaApp,
 					"/Users/zywang/Documents/Build/Products/Debug-iphonesimulator",
 					"/Users/zywang/Documents/Build/Products/Debug-iphoneos",
+					"/Users/Shared/Build/Products/Debug-iphonesimulator",
+					"/Users/Shared/Build/Products/Debug-iphoneos",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

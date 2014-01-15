@@ -14,6 +14,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    if (!iOS7) {
+        [application setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+        
+    }
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     mMainViewController = [[SHMainViewController alloc]init];
    
@@ -21,16 +25,18 @@
     UINavigationController* mNavigationViewController = [[UINavigationController alloc]init];
     [mNavigationViewController pushViewController:mMainViewController animated:NO];
     mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-    mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-    mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
+    if(iOS7){
+        mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+    }
+    mNavigationViewController.navigationBar.tintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     
     mNavigationViewController.navigationBar.translucent = NO;
     [mNavigationViewController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 //    [mNavigationViewController.navigationBar setHidden:YES];
 //    [self.view addSubview:mNavigationViewController.view];
-
-     self.window.rootViewController = mNavigationViewController;
     
+      self.window.rootViewController = mNavigationViewController;
+    //mNavigationViewController.view.frame = [[UIScreen mainScreen] bounds];
     [self.window makeKeyAndVisible];
     //self.w
     return YES;

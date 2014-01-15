@@ -64,9 +64,10 @@
 - (void)taskDidFinished:(SHTask *)task
 {
     mAdViewController = [[SHTempletImageViewController alloc]init];
+
     mAdViewController.func = @"advertise";
     mAdViewController.hidwait = YES;
-    mAdViewController.view;
+       mAdViewController.view.frame = [[UIScreen mainScreen] bounds];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -141,7 +142,7 @@
     mMainShowViewController = [[SHMainShowViewController alloc]init];
     [self addChildViewController:mMainShowViewController];
     [self.view addSubview:mMainShowViewController.view];
-    CGRect frame = mMainShowViewController.view.frame;
+    CGRect frame = [[UIScreen mainScreen] bounds];
     frame.origin.y = -frame.size.height;
     mMainShowViewController.view.frame = frame;
     frame.origin.y = 0;
