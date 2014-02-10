@@ -14,6 +14,7 @@
     __weak IBOutlet UITextField *mTxtField;
     __weak IBOutlet UIButton *btnCharacter;
     NSNumber * mSearchType;
+    int mSelectSection;
 }
 - (IBAction)btnCharacterOnTouch:(id)sender;
 - (IBAction)btnProductOnTouch:(id)sender;

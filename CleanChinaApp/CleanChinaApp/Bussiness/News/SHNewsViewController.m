@@ -8,6 +8,7 @@
 
 #import "SHNewsViewController.h"
 #import "SHNewsDetailViewController.h"
+#import "SHNewsCell.h"
 
 @interface SHNewsViewController ()
 
@@ -42,9 +43,25 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
-    SHTableViewTitleContentCell * cell = [tableView dequeueReusableTitleContentCell];
+    SHNewsCell * cell =  [[[NSBundle mainBundle]loadNibNamed:@"SHNewsCell" owner:Nil options:Nil] objectAtIndex:0];
+    if([[dic valueForKey:@"news_img"] length] >0){
+        SHHttpTask * task = [[SHHttpTask alloc]init];
+        task.URL = [dic valueForKey:@"news_img"];
+        task.cachetype = CacheTypeTimes;
+        cell.imgView.urlTask = task;
+    }else{
+        CGRect rect = cell.labTitle.frame;
+        rect.origin.x = 5;
+        rect.size.width = 310;
+        cell.labTitle.frame = rect;
+    }
+    cell.labTitle.userstyle = @"labmiddark";
     cell.labTitle.text = [dic valueForKey:@"news_title"];
-    cell.labContent.text = [dic valueForKey:@"news_date"];
+    [cell.labTitle sizeToFit];
+    
+//    cell.labTitle.text = [dic valueForKey:@"news_title"];
+//    cell.labContent.text = [dic valueForKey:@"news_date"];
+
     return cell;
 }
 

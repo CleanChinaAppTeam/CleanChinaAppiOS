@@ -11,6 +11,9 @@
 @interface SHGoupengViewController : SHViewController
 {
     
+    IBOutlet UIBarButtonItem *mBtnBar2;
+    IBOutlet UIBarButtonItem *mBtnBar1;
     __weak IBOutlet UIView *mViewBottom;
 }
+- (IBAction)btnBarOnTouch:(id)sender;
 @end

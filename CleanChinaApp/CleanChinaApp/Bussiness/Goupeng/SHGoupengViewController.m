@@ -7,6 +7,7 @@
 //
 
 #import "SHGoupengViewController.h"
+#import "SHExhibitionFloorPlanViewController.h"
 
 @interface SHGoupengViewController ()
 
@@ -29,6 +30,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     mViewBottom.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     self.title = @"聚划算";
+    self.navigationItem.rightBarButtonItems = [NSMutableArray arrayWithObjects:mBtnBar1,mBtnBar2, nil];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -38,4 +40,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnBarOnTouch:(id)sender
+{
+    SHExhibitionFloorPlanViewController * controller = [[SHExhibitionFloorPlanViewController alloc ]init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

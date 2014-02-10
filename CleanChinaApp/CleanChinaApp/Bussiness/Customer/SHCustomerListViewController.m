@@ -46,6 +46,7 @@
 - (void)taskDidFinished:(SHTask *)task
 {
     [self dismissWaitDialog];
+    mSelectSection = 0;
     mList = (NSArray*)task.result;
     [self.tableView reloadData];
 }
@@ -58,12 +59,27 @@
 - (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     NSDictionary * dic = [mList objectAtIndex:section];
-    UILabel * lab = [super tableView:tableView viewForHeaderInSection:section];
+    UIButton * lab = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 320, 28)];
     lab.backgroundColor = [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1];
-    lab.textAlignment = NSTextAlignmentLeft;
+//    lab.textAlignment = NSTextAlignmentLeft;
     lab.userstyle = @"labmiddark";
-    lab.text = [NSString stringWithFormat:@"   %@",[dic valueForKey:@"sectionname"]];
+    [lab setTitle: [NSString stringWithFormat:@"   %@",[dic valueForKey:@"sectionname"]] forState:UIControlStateNormal] ;
+    lab.tag = section;
+    lab.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [lab addTarget:self action:@selector(btnOnTouch:) forControlEvents:UIControlEventTouchUpInside];
+    UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
+    view.backgroundColor = [UIColor lightTextColor];
+    [lab addSubview:view];
+    view = [[UIView alloc] initWithFrame:CGRectMake(0, 28, 320, 1)];
+    view.backgroundColor = [UIColor lightTextColor];
+    [lab addSubview:view];
     return lab;
+}
+
+- (void)btnOnTouch:(UIButton*)sender
+{
+    mSelectSection = sender.tag;
+    [self.tableView reloadSections:  [NSIndexSet indexSetWithIndex:mSelectSection]  withRowAnimation:UITableViewRowAnimationFade];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -76,7 +92,7 @@
 
 - (float) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 18;
+    return 28;
 }
 
 - (void)didReceiveMemoryWarning
@@ -87,8 +103,12 @@
 
 - (int) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary * dic = [mList objectAtIndex:section];
-    return [[dic valueForKey:@"company"] count];
+//    if(section == mSelectSection){
+        NSDictionary * dic = [mList objectAtIndex:section];
+        return [[dic valueForKey:@"company"] count];
+//    }else{
+//        return 0;
+//    }
 }
 
 - (int) numberOfSectionsInTableView:(UITableView *)tableView
@@ -99,7 +119,12 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 36;
+    if(indexPath.section == mSelectSection){
+        return 36;
+    }else{
+        return 0;
+    }
+
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,12 +136,12 @@
     return cell;
 }
 
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    
-    NSArray * array = [mList valueForKey:@"sectionname"];
-    return array;
-    
-}
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    
+//    NSArray * array = [mList valueForKey:@"sectionname"];
+//    return array;
+//    
+//}
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

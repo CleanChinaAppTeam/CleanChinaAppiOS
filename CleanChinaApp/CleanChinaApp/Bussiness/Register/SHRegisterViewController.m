@@ -29,7 +29,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     self.title = @"观众登记";
     self.keybordView = self.view;
-    self.keybordheight = 50;
+    self.keybordheight = 80;
     self.navigationItem.rightBarButtonItem = mBarButton;
     // Do any additional setup after loading the view from its nib.
 }

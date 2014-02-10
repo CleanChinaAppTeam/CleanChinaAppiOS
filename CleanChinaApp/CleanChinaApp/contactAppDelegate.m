@@ -27,9 +27,10 @@
     mNavigationViewController.navigationBar.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     if(iOS7){
         mNavigationViewController.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
+        mNavigationViewController.navigationBar.tintColor = [UIColor whiteColor];
+    }else{
+        mNavigationViewController.navigationBar.tintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
     }
-    mNavigationViewController.navigationBar.tintColor = [NVSkin.instance colorOfStyle:@"ColorNavigationBackGround"];
-    
     mNavigationViewController.navigationBar.translucent = NO;
     [mNavigationViewController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
 //    [mNavigationViewController.navigationBar setHidden:YES];
