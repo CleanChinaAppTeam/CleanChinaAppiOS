@@ -41,7 +41,6 @@
 		9E0FC5B5186C6163008D3585 /* SHRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E0FC5B3186C6163008D3585 /* SHRegisterViewController.m */; };
 		9E0FC5B6186C6163008D3585 /* SHRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FC5B4186C6163008D3585 /* SHRegisterViewController.xib */; };
 		9E0FC5B8186C8070008D3585 /* img_textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FC5B7186C8070008D3585 /* img_textbox.png */; };
-		9E0FC5BA186C9FA0008D3585 /* S28C-113120614011.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E0FC5B9186C9FA0008D3585 /* S28C-113120614011.png */; };
 		9E1D24EC1846576D00ACEE9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1D24EB1846576D00ACEE9E /* Foundation.framework */; };
 		9E1D24EE1846576D00ACEE9E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1D24ED1846576D00ACEE9E /* CoreGraphics.framework */; };
 		9E1D24F01846576D00ACEE9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1D24EF1846576D00ACEE9E /* UIKit.framework */; };
@@ -265,6 +264,10 @@
 		9E7BF2D11862812F00325186 /* SHGoupengViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E7BF2CF1862812F00325186 /* SHGoupengViewController.xib */; };
 		9EA397F51858CC08006E0A6E /* ic_weibo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA397F31858CC08006E0A6E /* ic_weibo.png */; };
 		9EA397F61858CC08006E0A6E /* ic_wetion.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA397F41858CC08006E0A6E /* ic_wetion.png */; };
+		9EB2B2BA18A9391600D2B837 /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB2B2B718A9391600D2B837 /* Default-568@2x.png */; };
+		9EB2B2BB18A9391600D2B837 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB2B2B818A9391600D2B837 /* Default.png */; };
+		9EB2B2BC18A9391600D2B837 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EB2B2B918A9391600D2B837 /* Default@2x.png */; };
+		9EB2B2BE18A9396400D2B837 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB2B2BD18A9396400D2B837 /* Images-2.xcassets */; };
 		9EE3E69A18844A3B003F4FA1 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E69918844A3B003F4FA1 /* libCore.a */; };
 /* End PBXBuildFile section */
 
@@ -321,7 +324,6 @@
 		9E0FC5B3186C6163008D3585 /* SHRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHRegisterViewController.m; sourceTree = "<group>"; };
 		9E0FC5B4186C6163008D3585 /* SHRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHRegisterViewController.xib; sourceTree = "<group>"; };
 		9E0FC5B7186C8070008D3585 /* img_textbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_textbox.png; sourceTree = "<group>"; };
-		9E0FC5B9186C9FA0008D3585 /* S28C-113120614011.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S28C-113120614011.png"; sourceTree = "<group>"; };
 		9E1D24E81846576D00ACEE9E /* CleanChinaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanChinaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1D24EB1846576D00ACEE9E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9E1D24ED1846576D00ACEE9E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -637,6 +639,10 @@
 		9E7BF2CF1862812F00325186 /* SHGoupengViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SHGoupengViewController.xib; sourceTree = "<group>"; };
 		9EA397F31858CC08006E0A6E /* ic_weibo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_weibo.png; sourceTree = "<group>"; };
 		9EA397F41858CC08006E0A6E /* ic_wetion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wetion.png; sourceTree = "<group>"; };
+		9EB2B2B718A9391600D2B837 /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
+		9EB2B2B818A9391600D2B837 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9EB2B2B918A9391600D2B837 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9EB2B2BD18A9396400D2B837 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		9EE3E67E18844A3B003F4FA1 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		9EE3E67F18844A3B003F4FA1 /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		9EE3E68018844A3B003F4FA1 /* Entironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entironment.h; sourceTree = "<group>"; };
@@ -778,6 +784,7 @@
 				9E1D24FA1846576D00ACEE9E /* contactAppDelegate.h */,
 				9E1D24FB1846576D00ACEE9E /* contactAppDelegate.m */,
 				9E1D25031846576D00ACEE9E /* Images.xcassets */,
+				9EB2B2BD18A9396400D2B837 /* Images-2.xcassets */,
 				9E1D24F21846576D00ACEE9E /* Supporting Files */,
 			);
 			path = CleanChinaApp;
@@ -828,6 +835,9 @@
 		9E1ECC98184AD198003ECD5F /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
+				9EB2B2B718A9391600D2B837 /* Default-568@2x.png */,
+				9EB2B2B818A9391600D2B837 /* Default.png */,
+				9EB2B2B918A9391600D2B837 /* Default@2x.png */,
 				9E756852188EE8DA006B72AF /* ic_howtobuy@2x.png */,
 				9E756850188EE8D2006B72AF /* ic_wheretobuy@2x.png */,
 				9E75684C188EE69E006B72AF /* ic_howtobuy.png */,
@@ -838,7 +848,6 @@
 				9E04DD5D1871D0CA000E8BC7 /* ic_ensure@2x.png */,
 				9E04DD581871CF9F000E8BC7 /* ic_ensure_ac.png */,
 				9E04DD591871CF9F000E8BC7 /* ic_ensure.png */,
-				9E0FC5B9186C9FA0008D3585 /* S28C-113120614011.png */,
 				9E0FC59D18691A1A008D3585 /* ic_about_ac2.png */,
 				9E0FC59E18691A1A008D3585 /* ic_about2.png */,
 				9E0FC59F18691A1A008D3585 /* ic_cust_search_ac.png */,
@@ -1585,6 +1594,7 @@
 				9E33DCA31858CADA008C61AC /* ic_buss.png in Resources */,
 				9E33DC2318589E53008C61AC /* button_item_white_bg.png in Resources */,
 				9E33DC3018589E53008C61AC /* SHNoneViewCell.xib in Resources */,
+				9EB2B2BB18A9391600D2B837 /* Default.png in Resources */,
 				9E33DCA41858CADA008C61AC /* ic_buss@2x.png in Resources */,
 				9E33DCAC1858CADA008C61AC /* ic_youku@2x.png in Resources */,
 				9E33DCA71858CADA008C61AC /* ic_show.png in Resources */,
@@ -1595,6 +1605,7 @@
 				9E7BF28A1860C88300325186 /* img_logo_light.png in Resources */,
 				9E33DBF618589E53008C61AC /* DSLCalendar-nextMonth@2x.png in Resources */,
 				9E7BF27C1860A67600325186 /* ic_show_goupen.png in Resources */,
+				9EB2B2BC18A9391600D2B837 /* Default@2x.png in Resources */,
 				9E04DDB21873DE9B000E8BC7 /* SHWebViewController.xib in Resources */,
 				9E33DC2618589E53008C61AC /* SHNavigationShowViewController.xib in Resources */,
 				9E33DC9D1858CADA008C61AC /* ic_book_ac.png in Resources */,
@@ -1604,6 +1615,7 @@
 				9E54B20D1879CA5500F2787A /* SHWeiboListViewController.xib in Resources */,
 				9E33DCAA1858CADA008C61AC /* ic_youku_ac@2x.png in Resources */,
 				9E33DBF118589E53008C61AC /* DSLCalendarMonthSelectorView.xib in Resources */,
+				9EB2B2BA18A9391600D2B837 /* Default-568@2x.png in Resources */,
 				9E33DC2718589E53008C61AC /* showview_left_shade.png in Resources */,
 				9E04DD5B1871CF9F000E8BC7 /* ic_ensure.png in Resources */,
 				9E54B1F018788E3E00F2787A /* SHElectronicJournalsListViewController.xib in Resources */,
@@ -1666,7 +1678,6 @@
 				9E33DC2418589E53008C61AC /* navigation_bar_bg.png in Resources */,
 				9E1D25041846576D00ACEE9E /* Images.xcassets in Resources */,
 				9E33DBFB18589E53008C61AC /* DSLCalendarDaySelection-left.png in Resources */,
-				9E0FC5BA186C9FA0008D3585 /* S28C-113120614011.png in Resources */,
 				9E7BF26A1860A47100325186 /* ic_show_search.png in Resources */,
 				9E1ECC2F184AC72B003ECD5F /* font.xml in Resources */,
 				9E33DC2D18589E53008C61AC /* ic_re_error.png in Resources */,
@@ -1695,6 +1706,7 @@
 				9E241A13185A9D7E0029A807 /* SHMainShowViewController.xib in Resources */,
 				9E33DBF718589E53008C61AC /* DSLCalendar-previousMonth.png in Resources */,
 				9E33DC3218589E53008C61AC /* SHTableViewEditGeneralCell.xib in Resources */,
+				9EB2B2BE18A9396400D2B837 /* Images-2.xcassets in Resources */,
 				9E7BF2791860A63200325186 /* ic_show_goupen_ac.png in Resources */,
 				9E54B21B18814B1600F2787A /* ic_floor1.png in Resources */,
 				9E04DD3A1871AF09000E8BC7 /* SHCustomerDetailViewController.xib in Resources */,
