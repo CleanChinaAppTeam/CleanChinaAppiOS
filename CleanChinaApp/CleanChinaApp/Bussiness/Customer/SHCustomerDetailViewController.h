@@ -14,6 +14,7 @@
     __weak IBOutlet UILabel *mLabName;
     __weak IBOutlet SHImageView *mImgLogo;
     __weak IBOutlet UILabel *mLabPhone;
+    __weak IBOutlet UILabel *mLocation;
 }
 
 @property (nonatomic,copy) NSString * companyid;

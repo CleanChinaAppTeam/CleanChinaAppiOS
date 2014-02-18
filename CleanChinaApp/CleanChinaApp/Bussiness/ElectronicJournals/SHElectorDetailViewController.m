@@ -78,5 +78,8 @@
     view.imageView.urlTask = task;
     return view;
 }
-
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return [[scrollView subviews] objectAtIndex:0];
+}
 @end

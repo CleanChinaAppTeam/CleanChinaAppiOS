@@ -71,32 +71,32 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"餐饮";
         controller.func = @"expo5";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 1){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"网络";
         controller.func = @"expo6";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 2){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"洗手间";
         controller.func = @"expo7";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 3){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"礼品";
         controller.func = @"expo8";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 4){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"主办方办公室";
         controller.func = @"expo9";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 5){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"VIP休息区";
         controller.func = @"expo10";
         [self.navigationController pushViewController:controller animated:YES];

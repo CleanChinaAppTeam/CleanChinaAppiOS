@@ -29,6 +29,7 @@
     mSearchType = [NSNumber numberWithInt:1];
     self.title = @"展商查询";
     [self request:@""];
+    btnCharacter.selected = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -65,6 +66,7 @@
     lab.userstyle = @"labmiddark";
     [lab setTitle: [NSString stringWithFormat:@"   %@",[dic valueForKey:@"sectionname"]] forState:UIControlStateNormal] ;
     lab.tag = section;
+    [lab setTitleColor:[UIColor colorWithRed:61/255.0 green:61/255.0 blue:61/255.0 alpha:1] forState:UIControlStateNormal];
     lab.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [lab addTarget:self action:@selector(btnOnTouch:) forControlEvents:UIControlEventTouchUpInside];
     UIView * view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];

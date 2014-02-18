@@ -8,8 +8,9 @@
 
 #import "SHViewController.h"
 
-@interface SHContentViewController : SHViewController
+@interface SHContentViewController : SHViewController<SHTaskDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *txtContent;
-
-@property (strong,nonatomic) NSString * content;    @end
+@property (copy,nonatomic) NSString * func;
+@property (strong,nonatomic) NSString * content;
+@end

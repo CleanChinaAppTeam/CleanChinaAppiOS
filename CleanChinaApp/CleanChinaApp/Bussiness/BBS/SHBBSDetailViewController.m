@@ -40,9 +40,7 @@
     mLabTitle.text = [task.result valueForKey:@"forum_name"];
     mLabAddress.text =  [NSString stringWithFormat:@"地点:%@", [task.result valueForKey:@"forum_address"]];
     mLabTime.text =  [NSString stringWithFormat:@"时间:%@", [task.result valueForKey:@"forum_date"]];
-    mLabTeacher.text =  [NSString stringWithFormat:@"主讲:%@", [task.result valueForKey:@"instructor"]];
-    mLabMeet.text = [NSString stringWithFormat:@"议程:%@",  [task.result valueForKey:@"agenda"]];
-    mTxtSummary.text = [task.result valueForKey:@"summary"];
+     mTxtSummary.text = [task.result valueForKey:@"fullDescr"];
     mTxtSummary.userstyle = @"labmidlight";
     [self dismissWaitDialog];
 }

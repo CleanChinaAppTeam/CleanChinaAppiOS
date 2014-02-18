@@ -44,6 +44,7 @@
         task2.URL =[task.result valueForKey:@"logo"];
         mImgLogo.urlTask = task2;
     }
+    mLocation.text = [NSString stringWithFormat:@"展位:%@", [task.result valueForKey:@"zhanweihao"]];
     mLabPhone.text = [NSString stringWithFormat:@"电话:%@", [task.result valueForKey: @"tele"]];
     mLabName.text = [task.result valueForKey:@"companyname"];
     mTxtSummer.text = [task.result valueForKey:@"summary"];

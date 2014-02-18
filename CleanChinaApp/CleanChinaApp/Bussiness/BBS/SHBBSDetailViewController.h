@@ -12,9 +12,7 @@
 {
     __weak IBOutlet UILabel *mLabTitle;
     __weak IBOutlet UILabel *mLabTime;
-    __weak IBOutlet UILabel *mLabMeet;
     __weak IBOutlet UILabel *mLabAddress;
-    __weak IBOutlet UILabel *mLabTeacher;
     __weak IBOutlet UITextView *mTxtSummary;
 }
 

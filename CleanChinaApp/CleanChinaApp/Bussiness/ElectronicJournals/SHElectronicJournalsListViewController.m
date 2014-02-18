@@ -42,7 +42,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"magazine1");
-    [post.postArgs setValue:[NSNumber numberWithInt:2014]forKey:@"magazine_year"];
+    [post.postArgs setValue:[NSNumber numberWithInt:2013]forKey:@"magazine_year"];
     post.delegate = self;
     [post start];
     // Do any additional setup after loading the view from its nib.

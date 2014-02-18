@@ -14,6 +14,8 @@
 
 @implementation SHContentViewController
 
+@synthesize func;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -32,10 +34,20 @@
 {
     [super viewDidLoad];
     self.txtContent.text = self.content;
+    [self showWaitDialogForNetWork];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    post.URL = URL_FOR(self.func);
+    post.delegate = self;
+    [post start];
 
     // Do any additional setup after loading the view from its nib.
 }
-
+- (void)taskDidFinished:(SHTask *)task
+{
+    [self dismissWaitDialog];
+    self.txtContent.text = [task.result valueForKey:@"img"];
+    self.txtContent.userstyle = @"labmiddark";
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

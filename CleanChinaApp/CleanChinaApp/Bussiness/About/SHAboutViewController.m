@@ -10,6 +10,7 @@
 #import "SHIntroductionViewController.h"
 #import "SHTempletImageViewController.h"
 #import "SHSceneViewController.h"
+#import "SHContentViewController.h"
 
 @interface SHAboutViewController ()
 
@@ -77,22 +78,22 @@
         SHIntroductionViewController * controller = [[SHIntroductionViewController alloc]init];
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 1){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"如何参观";
         controller.func = @"expo1";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 2){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"酒店住宿";
         controller.func = @"expo2";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 3){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"免费班车";
         controller.func = @"expo3";
         [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.row == 4){
-        SHTempletImageViewController * controller = [[SHTempletImageViewController alloc]init];
+        SHContentViewController * controller = [[SHContentViewController alloc]init];
         controller.title = @"停车服务";
         controller.func = @"expo4";
         [self.navigationController pushViewController:controller animated:YES];

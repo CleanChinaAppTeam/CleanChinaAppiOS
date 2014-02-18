@@ -50,10 +50,10 @@
         task.cachetype = CacheTypeTimes;
         cell.imgView.urlTask = task;
     }else{
-        CGRect rect = cell.labTitle.frame;
-        rect.origin.x = 5;
-        rect.size.width = 310;
-        cell.labTitle.frame = rect;
+//        CGRect rect = cell.labTitle.frame;
+//        rect.origin.x = 5;
+//        rect.size.width = 310;
+//        cell.labTitle.frame = rect;
     }
     cell.labTitle.userstyle = @"labmiddark";
     cell.labTitle.text = [dic valueForKey:@"news_title"];
