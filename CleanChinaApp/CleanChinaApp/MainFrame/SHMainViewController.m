@@ -11,6 +11,9 @@
 #import "SHNewsViewController.h"
 #import "SHElectronicJournalsListViewController.h"
 
+
+#define STORE_NAME @"mainviewcontroller.name"
+
 @interface SHMainViewController ()
 
 @end
@@ -33,6 +36,11 @@
     mLoadingViewController =  [[SHLoadingViewController alloc]init ];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"advertise");
+    post.delegate = self;
+    [post start];
+    post = [[SHPostTaskM alloc]init];
+    post.tag = 1;
+    post.URL = URL_FOR(@"message");
     post.delegate = self;
     [post start];
     //[self addChildViewController:mLoadingViewController];
@@ -63,11 +71,23 @@
 
 - (void)taskDidFinished:(SHTask *)task
 {
-    mAdViewController = [[SHTempletImageViewController alloc]init];
-
-    mAdViewController.func = @"advertise";
-    mAdViewController.hidwait = YES;
-       mAdViewController.view.frame = [[UIScreen mainScreen] bounds];
+    if(task.tag == 0){
+        mAdViewController = [[SHTempletImageViewController alloc]init];
+        
+        mAdViewController.func = @"advertise";
+        mAdViewController.hidwait = YES;
+        mAdViewController.view.frame = [[UIScreen mainScreen] bounds];
+    }else if (task.tag == 1){
+        NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+        NSArray * array = [ud valueForKey:STORE_NAME];
+        if([task.result valueForKey:@"msg_id"] != nil){
+            msg_id = [task.result valueForKey:@"msg_id"];
+            if(array == nil || ![array containsObject:[task.result valueForKey:@"msg_id"]]){
+                mViewMessage.hidden = NO;
+                mLabMessage.text = [task.result valueForKey:@"msg_content"];
+            }
+        }
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -119,6 +139,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)btnCancelOnTouch:(id)sender
+{
+    mViewMessage.hidden = YES;
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    NSArray * array = [ud valueForKey:STORE_NAME];
+    NSMutableArray *mArray = array == nil ? [[NSMutableArray alloc] init] : [array mutableCopy];
+    [mArray addObject:msg_id ];
+    [ud setValue:mArray forKey:STORE_NAME];
+    [ud synchronize];
 }
 
 - (IBAction)btnNewsOnTouch:(id)sender

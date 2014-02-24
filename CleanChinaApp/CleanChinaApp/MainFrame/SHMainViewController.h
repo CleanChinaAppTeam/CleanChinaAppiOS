@@ -28,7 +28,13 @@
     __weak IBOutlet UILabel *mLab3;
     __weak IBOutlet UILabel *mLab2;
     __weak IBOutlet UILabel *mLab1;
+    __weak IBOutlet UIView *mViewMessage;
+    __weak IBOutlet UILabel *mLabMessage;
+    NSObject * msg_id ;
 }
+
+- (IBAction)btnCancelOnTouch:(id)sender;
+
 - (IBAction)btnNewsOnTouch:(id)sender;
 
 - (IBAction)btnBussinessOnTouch:(id)sender;

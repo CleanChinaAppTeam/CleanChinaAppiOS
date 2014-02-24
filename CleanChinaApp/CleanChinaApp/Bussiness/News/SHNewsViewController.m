@@ -55,6 +55,8 @@
 //        rect.size.width = 310;
 //        cell.labTitle.frame = rect;
     }
+    cell.labDate.userstyle = @"labmiddark";
+    cell.labDate.text= [dic valueForKey:@"news_date"];
     cell.labTitle.userstyle = @"labmiddark";
     cell.labTitle.text = [dic valueForKey:@"news_title"];
     [cell.labTitle sizeToFit];

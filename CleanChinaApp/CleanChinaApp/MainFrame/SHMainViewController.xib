@@ -17,7 +17,9 @@
                 <outlet property="mLab3" destination="RUP-RF-jE5" id="rgk-SM-uZx"/>
                 <outlet property="mLab4" destination="QWR-b7-KVc" id="iHI-7R-Kx6"/>
                 <outlet property="mLab5" destination="In6-BP-xCG" id="bj2-8t-pFH"/>
-                <outlet property="mView" destination="yUM-v6-DWb" id="pBW-TK-JlA"/>
+                <outlet property="mLabMessage" destination="eh9-uK-cu9" id="EFU-CO-3fy"/>
+                <outlet property="mView" destination="yUM-v6-DWb" id="pZT-kL-fuF"/>
+                <outlet property="mViewMessage" destination="uaw-T3-psh" id="KtT-mf-t9A"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -197,6 +199,35 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="userstyle" value="labmidlight"/>
                     </userDefinedRuntimeAttributes>
                 </label>
+                <view hidden="YES" contentMode="scaleToFill" id="uaw-T3-psh">
+                    <rect key="frame" x="0.0" y="485" width="320" height="83"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_pop.png" id="dAn-LR-Fyk">
+                            <rect key="frame" x="63" y="5" width="193" height="74"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="中国人民万岁中国人民万岁中国人民万岁中国人民万岁中国人民万岁中国人民万岁中国人民万岁中国人民万岁" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" id="eh9-uK-cu9">
+                            <rect key="frame" x="88" y="17" width="144" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vmK-R3-sae">
+                            <rect key="frame" x="221" y="0.0" width="35" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="ic_cancel.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="ic_cancel_ac.png"/>
+                            <connections>
+                                <action selector="btnCancelOnTouch:" destination="-1" eventType="touchUpInside" id="jxc-da-2wQ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -208,6 +239,8 @@
         <image name="ic_book_ac.png" width="58" height="58"/>
         <image name="ic_buss.png" width="58" height="58"/>
         <image name="ic_buss_ac.png" width="58" height="58"/>
+        <image name="ic_cancel.png" width="50" height="50"/>
+        <image name="ic_cancel_ac.png" width="50" height="50"/>
         <image name="ic_new.png" width="46" height="46"/>
         <image name="ic_new_ac.png" width="46" height="46"/>
         <image name="ic_show.png" width="83" height="83"/>
@@ -217,5 +250,6 @@
         <image name="ic_youku.png" width="46" height="46"/>
         <image name="ic_youku_ac.png" width="46" height="46"/>
         <image name="img_main_boll.png" width="380" height="427"/>
+        <image name="img_pop.png" width="386" height="148"/>
     </resources>
 </document>
