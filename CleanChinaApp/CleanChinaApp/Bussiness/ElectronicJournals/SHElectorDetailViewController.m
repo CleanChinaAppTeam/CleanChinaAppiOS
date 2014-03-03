@@ -34,16 +34,14 @@
     [post.postArgs setValue:self.magazine_id forKey:@"magazine_id"];
     post.delegate = self;
     [post start];
-    self.scrollview.pagingEnabled = YES;
-    self.scrollview.datasource = self;
-    self.scrollview.delegate = self;
-    // Do any additional setup after loading the view from its nib.
+    
+    [self.collectView registerNib:[UINib nibWithNibName:@"SHElectrnicView" bundle:nil] forCellWithReuseIdentifier:@"default"];    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)taskDidFinished:(SHTask *)task
 {
     mList = [task.result valueForKey:@"images"];
-    [self.scrollview reloadData];
+    [self.collectView reloadData];
     [self dismissWaitDialog];
 }
 
@@ -58,28 +56,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (int) tableView:(SHTableHorizontalView *)tableView numberOfColumnInSection:(NSInteger)section
+
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return mList.count;
+     return mList.count;
 }
 
-- (float) tableView:(SHTableHorizontalView *)tableView widthForColumnAtIndexPath:(NSIndexPath *)indexPath
-{
-    return self.view.frame.size.width;
-}
-
-- (SHTableHorizontalViewCell*) tableView:(SHTableHorizontalView *)tableView cellForColumnAtIndexPath:(NSIndexPath *)indexPath
+// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* url  = [mList objectAtIndex:indexPath.row];
-    SHElectrnicView * view = [[[NSBundle mainBundle]loadNibNamed:@"SHElectrnicView" owner:Nil options:nil] objectAtIndex:0];
+    SHElectrnicView * view = [collectionView dequeueReusableCellWithReuseIdentifier:@"default" forIndexPath:indexPath];
     SHHttpTask * task = [[SHHttpTask alloc]init];
     task.cachetype = CacheTypeTimes;
     task.URL = url;
     view.imageView.urlTask = task;
     return view;
+
 }
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[scrollView subviews] objectAtIndex:0];
+    controller = [[SHZoomingViewController alloc]init];
+    NSString* url  = [mList objectAtIndex:indexPath.row];
+    controller.URL = url;
+    [controller show];
+
 }
 @end

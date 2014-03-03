@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHElectorDetailViewController">
             <connections>
-                <outlet property="scrollview" destination="nIL-N0-o7K" id="yOF-ea-P8Q"/>
+                <outlet property="collectView" destination="GGM-R8-TuM" id="Zy5-r2-mIn"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -16,13 +16,22 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="1.5" id="nIL-N0-o7K" customClass="SHTableHorizontalView">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" id="GGM-R8-TuM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sc7-Pm-FoI">
+                        <size key="itemSize" width="140" height="200"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="Bsc-5U-Rbp"/>
+                        <outlet property="dataSource" destination="-1" id="fdU-uz-oTB"/>
+                        <outlet property="delegate" destination="-1" id="cU8-oG-Gf1"/>
                     </connections>
-                </scrollView>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

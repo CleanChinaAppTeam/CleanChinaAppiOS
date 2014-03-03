@@ -28,6 +28,7 @@
     [super viewDidLoad];
     self.title = @"微博列表";
     [self.navigationController setNavigationBarHidden:NO animated:NO];
+    mDic = [[NSMutableDictionary alloc]init];
     SHPostTaskM * post = [[SHPostTaskM alloc]init];
     post.URL = URL_FOR(@"weibo");
     [post.postArgs setValue:[NSNumber numberWithInt:0] forKey:@"lessthan_wbid"];
@@ -46,15 +47,37 @@
     view.labTime.text = [dic valueForKey:@"weibo_submittime"];
     if([[dic valueForKey:@"images"] count ]>0){
         if([[[dic valueForKey:@"images"] objectAtIndex:0] length] > 0 ){
-            SHHttpTask * task = [[SHHttpTask alloc]init];
-            task.URL = [[dic valueForKey:@"images"] objectAtIndex:0];
-            task.cachetype = CacheTypeTimes;
-            view.imgView.urlTask = task;
+           // NSNumber *height = [mDic valueForKey:[NSString  stringWithFormat:@"%d",indexPath.row]];
+           // if(height == nil){
+                SHHttpTask * task = [[SHHttpTask alloc]init];
+                task.URL = [[dic valueForKey:@"images"] objectAtIndex:0];
+                task.cachetype = CacheTypeTimes;
+                view.imgView.delegate = self;
+                view.imgView.tag = indexPath.row;
+                view.imgView.urlTask = task;
+            
+              
+          //  }
         }
     }
     return view;
 }
+- (void) imageViewDidLoadFinished:(SHImageView*) imageview
+{
+    int height = imageview.image.size.height * 170/imageview.image.size.width;
+    NSNumber *numheight = [mDic valueForKey:[NSString  stringWithFormat:@"%d",imageview.tag]];
+    if(numheight == nil){
 
+    [mDic  setValue:[NSNumber numberWithInt:height] forKey:[NSString stringWithFormat:@"%d",imageview.tag]];
+        [self performSelector:@selector(refresh:) withObject:[NSIndexPath indexPathForRow:imageview.tag inSection:0] afterDelay:0.1];
+    }
+}
+
+- (void)refresh:(NSIndexPath *) index
+{
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:index] withRowAnimation:UITableViewRowAnimationFade];
+    
+}
 - (void)taskDidFailed:(SHTask *)task
 {
     [self dismissWaitDialog];
@@ -70,7 +93,12 @@
     NSDictionary * dic = [mList objectAtIndex:indexPath.row];
     if([[dic valueForKey:@"images"] count ]>0){
         if([[[dic valueForKey:@"images"] objectAtIndex:0] length] > 0 ){
-            return 220;
+            NSNumber *height = [mDic valueForKey:[NSString  stringWithFormat:@"%d",indexPath.row]];
+            if(height == nil){
+                return 100;
+            }else{
+                return 100 + height.floatValue;
+            }
         }
     }
     return 100;

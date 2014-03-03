@@ -44,4 +44,4 @@
 #import "VRGCalendarView.h"
 #import "SHLogger.h"
 #import "SHWebViewController.h"
-
+#import "SHZoomingViewController.h"

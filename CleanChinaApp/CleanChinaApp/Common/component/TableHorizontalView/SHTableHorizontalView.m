@@ -444,27 +444,27 @@
 
 - (void)scrollViewDidEndScrollingAnimation
 {
-    if(self.isPagingEnabled){
-        for(int i = 0 ;i<[_showViewArray count];i++)
-        {
-            SHTableHorizontalViewCell *cell = [_showViewArray objectAtIndex:i];
-            if(cell.frame.origin.x >= self.contentOffset.x){//找到select;
-                if(self.selectedIndex != nil && [self.delegate respondsToSelector:@selector(tableView: didDeSelectColumnAtIndexPath:)] == YES)
-                {
-                    [self.delegate tableView:self didDeSelectColumnAtIndexPath:self.selectedIndex];
-                    
-                }
-                
-                self.selectedIndex = cell.index;
-                if([self.delegate respondsToSelector:@selector(tableView: didSelectColumnAtIndexPath:)] ==YES)
-                    
-                {
-                    [self.delegate tableView:self didSelectColumnAtIndexPath:cell.index];
-                }
-                break;
-            }
-        }
-    }
+//    if(self.isPagingEnabled){
+//        for(int i = 0 ;i<[_showViewArray count];i++)
+//        {
+//            SHTableHorizontalViewCell *cell = [_showViewArray objectAtIndex:i];
+//            if(cell.frame.origin.x >= self.contentOffset.x){//找到select;
+//                if(self.selectedIndex != nil && [self.delegate respondsToSelector:@selector(tableView: didDeSelectColumnAtIndexPath:)] == YES)
+//                {
+//                    [self.delegate tableView:self didDeSelectColumnAtIndexPath:self.selectedIndex];
+//                    
+//                }
+//                
+//                self.selectedIndex = cell.index;
+//                if([self.delegate respondsToSelector:@selector(tableView: didSelectColumnAtIndexPath:)] ==YES)
+//                    
+//                {
+//                    [self.delegate tableView:self didSelectColumnAtIndexPath:cell.index];
+//                }
+//                break;
+//            }
+//        }
+//    }
 }
 
 - (void)setSelectedIndex:(NSIndexPath *)selectedIndex
@@ -609,7 +609,7 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView;     // return a view that will be scaled. if delegate returns nil, nothing happens
 {
-    if([self.delegate respondsToSelector:@selector(viewForZoomingInScrollView:scrollView:)])
+    if([self.delegate respondsToSelector:@selector(viewForZoomingInScrollView:)])
     {
        return  [self.delegate viewForZoomingInScrollView:scrollView];
     }

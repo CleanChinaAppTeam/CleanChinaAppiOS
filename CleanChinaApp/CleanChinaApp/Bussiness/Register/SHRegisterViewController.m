@@ -50,16 +50,22 @@
         [self showAlertDialog:@"公司名没有填写"];
         return;
     }
-    if(mTxtEmail.text.length == 0){
-        [self showAlertDialog:@"电子邮件没有填写"];
+    if(mTxtProvince.text.length == 0 || mTxtCity.text.length == 0){
+        [self showAlertDialog:@"省，市没有填写"];
         return;
     }
     if(mtxtAdress.text.length == 0){
         [self showAlertDialog:@"联系地址没有填写"];
         return;
     }
+
     if(mTxtPhone.text.length == 0){
         [self showAlertDialog:@"联系手机没有填写"];
+        return;
+    }
+
+    if(mTxtEmail.text.length == 0){
+        [self showAlertDialog:@"电子邮件没有填写"];
         return;
     }
     [self showWaitDialogForNetWork];

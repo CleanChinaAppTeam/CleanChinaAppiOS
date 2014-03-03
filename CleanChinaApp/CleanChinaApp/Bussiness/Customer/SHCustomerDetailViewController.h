@@ -7,6 +7,7 @@
 //
 
 #import "SHViewController.h"
+#import "SHExhibitionFloorPlanViewController.h"
 
 @interface SHCustomerDetailViewController : SHViewController <SHTaskDelegate>
 {
@@ -16,7 +17,11 @@
     __weak IBOutlet UILabel *mLabPhone;
     __weak IBOutlet UILabel *mLocation;
 }
+@property (weak, nonatomic) IBOutlet UIButton *btnShowLocation;
 
 @property (nonatomic,copy) NSString * companyid;
+
+@property (nonatomic,assign) BOOL hiddenShowLocation;
+- (IBAction)btnLocationOnTouch:(id)sender;
 
 @end

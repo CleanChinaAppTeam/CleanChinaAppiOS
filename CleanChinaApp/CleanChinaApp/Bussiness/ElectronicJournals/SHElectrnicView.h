@@ -8,7 +8,7 @@
 
 #import "SHViewController.h"
 
-@interface SHElectrnicView : SHTableHorizontalViewCell
+@interface SHElectrnicView : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet SHImageView *imageView;
 
 @end

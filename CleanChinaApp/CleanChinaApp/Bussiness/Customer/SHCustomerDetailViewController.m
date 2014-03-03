@@ -15,6 +15,7 @@
 @implementation SHCustomerDetailViewController
 
 @synthesize companyid;
+@synthesize hiddenShowLocation;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,7 @@
     [post.postArgs setValue:self.companyid forKey:@"companyid"];
     post.delegate = self;
     [post start];
+    self.btnShowLocation.hidden = self.hiddenShowLocation;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -62,4 +64,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)btnLocationOnTouch:(id)sender
+{
+    SHExhibitionFloorPlanViewController * controller = [[SHExhibitionFloorPlanViewController alloc]init];
+    controller.companyid = self.companyid;
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

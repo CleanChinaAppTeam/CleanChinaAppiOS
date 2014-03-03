@@ -9,5 +9,7 @@
 #import "SHTableViewController.h"
 
 @interface SHWeiboListViewController : SHTableViewController<SHTaskDelegate>
-
+{
+    NSMutableDictionary * mDic;
+}
 @end

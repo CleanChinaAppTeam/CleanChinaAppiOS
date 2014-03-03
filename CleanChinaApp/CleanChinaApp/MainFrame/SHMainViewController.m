@@ -168,8 +168,6 @@
 
 - (IBAction)btnShowOnTouch:(id)sender
 {
-
-
     mMainShowViewController = [[SHMainShowViewController alloc]init];
     [self addChildViewController:mMainShowViewController];
     [self.view addSubview:mMainShowViewController.view];

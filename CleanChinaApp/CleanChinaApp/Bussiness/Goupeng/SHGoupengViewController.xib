@@ -38,7 +38,7 @@
         </barButtonItem>
     </objects>
     <resources>
-        <image name="S28C-113120614011.png" width="1582" height="2172"/>
+        <image name="S28C-113120614011.png" width="620" height="877"/>
         <image name="ic_howtobuy.png" width="30" height="30"/>
         <image name="ic_wheretobuy.png" width="30" height="30"/>
     </resources>

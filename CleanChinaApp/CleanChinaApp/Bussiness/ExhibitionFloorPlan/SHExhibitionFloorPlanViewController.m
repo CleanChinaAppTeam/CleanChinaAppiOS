@@ -15,6 +15,8 @@
 
 @implementation SHExhibitionFloorPlanViewController
 
+@synthesize companyid;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -101,6 +103,8 @@
         for (int i =0; i < mList.count;i++) {
             NSDictionary * dic = [mList objectAtIndex:i];
             UIButton * button = [[UIButton alloc]init];
+            button.backgroundColor= [UIColor blackColor];
+            button.alpha = 0.2;
             button.tag = i;
             button.frame = CGRectMake([[ [dic valueForKey:@"coordinate"] valueForKey:@"tlx"] integerValue], [[ [dic valueForKey:@"coordinate"] valueForKey:@"tly"] integerValue], [[ [dic valueForKey:@"coordinate"] valueForKey:@"brx"] integerValue]- [[ [dic valueForKey:@"coordinate"] valueForKey:@"tlx"] integerValue], [[ [dic valueForKey:@"coordinate"] valueForKey:@"bry"] integerValue]- [[ [dic valueForKey:@"coordinate"] valueForKey:@"tly"] integerValue]);
             //button.backgroundColor = [UIColor redColor];
@@ -112,19 +116,46 @@
                 [mImgView2 addSubview:button];
                 
             }
+            if([[dic valueForKey:@"companyid"] intValue] == [self.companyid intValue]){
+              
+            
+                int x=0;
+                int y = 0;
+                if(button.frame.origin.x > self.view.frame.size.width){
+                    x = button.frame.origin.x - self.view.frame.size.width/2;
+                }
+                if(button.frame.origin.y > self.view.frame.size.height){
+                    y = button.frame.origin.y - self.view.frame.size.height/2;;
+                    
+                }
+                if([[dic valueForKey:@"zhanweiimg_id"] integerValue] ==1){
+                    
+                    //[self btnAction2:nil];
+                    //mScrollView1.zoomScale = 0.7;
+                    [mScrollView1 setZoomScale:1 animated:NO];
+                    [mScrollView1 setContentOffset:CGPointMake(x, y) animated:NO];
+
+                }else{
+                    [self btnAction1:nil];
+                    [mScrollView2 setZoomScale:1 animated:NO];
+                    [mScrollView2 setContentOffset:CGPointMake(x, y) animated:NO];
+                }
+                [self performSelector:@selector(btnCustomerOnTouch:) withObject:button afterDelay:0.5];
+            }
         }
     }
-    
-    [self dismissWaitDialog];
 }
+
+
 
 - (void) btnKxmenuOnTouch:(KxMenuItem *) button
 {
     SHCustomerDetailViewController * controller = [[SHCustomerDetailViewController alloc] init];
     controller.companyid = [[mList objectAtIndex:button.tag] valueForKey:@"companyid"];
     controller.title =  [[mList objectAtIndex:button.tag] valueForKey:@"companyname"] ;
+    controller.hiddenShowLocation = YES;
     [self.navigationController pushViewController:controller animated:YES];
-    
+
 }
 
 - (void)btnCustomerOnTouch:(UIButton*)sender
@@ -149,6 +180,7 @@
     scale = scale > image.frame.size.width / self.view.frame.size.width ? scale : image.frame.size.width / self.view.frame.size.width;
     ((UIScrollView*)image.superview).zoomScale = 1/scale;
     ((UIScrollView*)image.superview).minimumZoomScale = 1/scale;
+    [self dismissWaitDialog];
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {

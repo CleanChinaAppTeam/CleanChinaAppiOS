@@ -8,11 +8,13 @@
 
 #import "SHViewController.h"
 
-@interface SHElectorDetailViewController : SHViewController<SHTableHorizontalViewDataSource,SHTaskDelegate, SHTableHorizontalViewDelegate>
+@interface SHElectorDetailViewController : SHViewController<SHTaskDelegate,UICollectionViewDataSource,UICollectionViewDelegate >
 {
+    SHZoomingViewController * controller;
     NSArray * mList;
 }
-@property (weak, nonatomic) IBOutlet SHTableHorizontalView *scrollview;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectView;
+
 @property (nonatomic,retain) NSString * magazine_id;
 
 

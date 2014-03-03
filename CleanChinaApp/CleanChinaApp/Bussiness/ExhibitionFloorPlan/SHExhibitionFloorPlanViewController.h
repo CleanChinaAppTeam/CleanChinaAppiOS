@@ -17,4 +17,6 @@
     __weak IBOutlet UIScrollView *mScrollView1;
     NSArray * mList;
 }
+
+    @property (nonatomic,copy) NSString * companyid;
 @end
